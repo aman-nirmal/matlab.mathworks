@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+	
+	
+	<!-- Template Last Modified: 2026-06-08T10:35:47-04:00 -->
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<link rel="icon" href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/favicon.20260513204911014.ico" type="image/x-icon">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	
+	
+	
+	
+	<meta property="og:type" content="website">
+	
+
+	
+
+	
+	
+    
+<script async="" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/qevents.js"></script><script type="text/javascript" async="" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/insight.min.js"></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/186030155234771" async=""></script><script async="" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/fbevents.js"></script><script async="" type="text/javascript" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/cmp2.js"></script><script type="text/javascript" async="" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/td.min.js"></script><script async="" type="text/javascript" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/choice.js"></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/webvitals.min.20260513204911014.js"></script>
+
+
+
+
+	
+	
+
+	
+	
+	
+
+	
+
+	
+	
+		
+    
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/bootstrap5.min.20260513204911014.css" type="text/css">
+
+
+
+		
+    
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/bs5.min.20260513204911014.css" type="text/css">
+
+
+
+	
+	
+	
+	
+
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-italic-300.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-italic-400.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-italic-500.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-italic-700.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-normal-300.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-normal-400.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-normal-500.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/roboto/roboto-latin-normal-700.20260513204911014.woff2" rel="preload" as="font" type="font/woff2" crossorigin="">
+	<link href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/mathworks.20260513204911014.woff" rel="preload" as="font" type="font/woff" crossorigin="">
+
+	
+		
+		<script>(function(g,b,d,f){(function(a,c,d){if(a){var e=b.createElement("style");e.id=c;e.innerHTML=d;a.appendChild(e)}})(b.getElementsByTagName("head")[0],"at-body-style",d);setTimeout(function(){var a=b.getElementsByTagName("head")[0];if(a){var c=b.getElementById("at-body-style");c&&a.removeChild(c)}},f)})(window,document,"[class*='personalization-container']:not([id^='web-application']) {opacity: 0 !important}",1E3);</script> <script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js" async=""></script>
+
+	
+	
+
+	
+
+	
+
+	
+	
+
+
+
+<script>digitalData={pageInstanceID:"document.title",page:{pageInfo:{destinationURL:document.location.href},category:{primaryCategory:"courses",subCategory1:"",pageType:""},attributes:{descriptonCode:"",courseName:"",fullCourseName:"",learningPathCode:""}}}</script><link href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/2.46e1e319.chunk.css" rel="stylesheet"><link href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/main.a63c810c.chunk.css" rel="stylesheet"><title>Calculations with Vectors and Matrices | Self-Paced Online Courses - MATLAB &amp; Simulink</title><link rel="canonical" href="https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm" data-react-helmet="true"><meta property="og:url" content="https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm" data-react-helmet="true"><meta property="og:title" content="Calculations with Vectors and Matrices | Self-Paced Online Courses - MATLAB &amp; Simulink" data-react-helmet="true"><meta property="og:description" content="Gain a deeper understanding of how to work with matrices and arrays in MATLAB. Learn the difference between element-wise and matrix operations, how to take advantage of implicit expansion, and apply statistical operations to arrays." data-react-helmet="true"><meta property="og:type" content="website"><meta name="twitter:card" content="summary" data-react-helmet="true"><meta name="twitter:title" content="Calculations with Vectors and Matrices | Self-Paced Online Courses - MATLAB &amp; Simulink" data-react-helmet="true"><meta name="twitter:description" content="Gain a deeper understanding of how to work with matrices and arrays in MATLAB. Learn the difference between element-wise and matrix operations, how to take advantage of implicit expansion, and apply statistical operations to arrays." data-react-helmet="true"><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/AppMeasurement.min.js" async=""></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/AppMeasurement_Module_ActivityMap.min.js" async=""></script><style type="text/css"> .qc-cmp-button {    background-color: #0076a8 !important;    border-color: #0076a8 !important;  }  .qc-cmp-button:hover {    border-color: #0076a8 !important;  }  .qc-cmp-alt-action,  .qc-cmp-link {    color: #0076a8 !important;  }  .qc-cmp-button.qc-cmp-secondary-button:hover {    background-color: #0076a8 !important;    border-color: #0076a8 !important;  }  .qc-cmp-button.qc-cmp-secondary-button:hover {    color: #ffffff !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    color: #0076a8 !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    background-color: #eee !important;    border-color: transparent !important;  }  .qc-cmp-ui,  .qc-cmp-ui .qc-cmp-title,  .qc-cmp-ui .qc-cmp-table,  .qc-cmp-ui .qc-cmp-messaging,  .qc-cmp-ui .qc-cmp-sub-title,  .qc-cmp-ui .qc-cmp-vendor-list,  .qc-cmp-ui .qc-cmp-purpose-info,  .qc-cmp-ui .qc-cmp-table-header,  .qc-cmp-ui .qc-cmp-beta-messaging,  .qc-cmp-ui .qc-cmp-main-messaging,  .qc-cmp-ui .qc-cmp-vendor-list-title{    color: #1a1a1a !important;  }  .qc-cmp-ui a,  .qc-cmp-ui .qc-cmp-alt-action {    color: #0076a8 !important;  }  .qc-cmp-ui {    background-color: #fef9ed !important;  } .dvsjko.dvsjko.dvsjko.dvsjko .qc-cmp2-footer .qc-cmp2-summary-buttons button { border-radius: 4px; }.dvsjko.dvsjko.dvsjko.dvsjko .qc-cmp2-footer .qc-cmp2-summary-buttons button:last-child:hover { background-color: #3391b9; }.iicKQX.iicKQX .qc-cmp2-footer .qc-cmp2-buttons-desktop button { border-radius: 4px; }.iicKQX.iicKQX .qc-cmp2-footer .qc-cmp2-buttons-desktop button:last-of-type:hover { background-color: #3391b9; }.iicKQX.iicKQX .qc-cmp2-footer > button { border-radius: 4px; }</style><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/js" async=""></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/RC20a6019042b542298807cdc9e182767d-source.min.js" async=""></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/RCedfaed1d03de47189f18649f7e2d6cb0-source.min.js" async=""></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/last-event-tag-latest.min.js"></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/RC05fd1ce7514f4ecb83fb546a37c08e91-source.min.js" async=""></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/RCc87629ec9c1c4dc4bc3f3373afa48760-source.min.js" async=""></script><meta name="description" content="Gain a deeper understanding of how to work with matrices and arrays in MATLAB. Learn the difference between element-wise and matrix operations, how to take advantage of implicit expansion, and apply statistical operations to arrays. vectors matrices arrays implicit expansion" data-react-helmet="true"><meta property="og:image" content="https://matlabacademy.mathworks.com/images/otmlcvm/panel_.webp" data-react-helmet="true"><meta name="twitter:image" content="https://matlabacademy.mathworks.com/images/otmlcvm/panel_.webp" data-react-helmet="true"></head>
+
+
+
+	<body class="site_lang_en templateservice -has_usernav -is_full_header">
+		<a class="skip_link visually-hidden-focusable" href="https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm#main">Skip to content</a>
+
+		
+		
+
+
+	<div class="sticky-top" id="sticky_container">
+		
+
+	<header class="-has_matrix
+					 -has_mwa
+					 -has_store
+					 -has_topnav
+					 -has_subnav
+					 -has_slidingnav">
+		<nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+			<div class="container-fluid container-lg">
+				<div class="d-lg-flex flex-row align-items-center" id="header_content_container">
+					<a href="https://www.mathworks.com/?s_tid=user_nav_logo" class="navbar-brand d-inline-flex">
+						
+						<img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/mathworks-logo-membrane.20260513204911014.svg" class="mw_logo" alt="MathWorks" width="34" height="30">
+					</a>
+
+					<div class="sectionHead sectionhead containsResourceName resourceClass-sectionhead">
+
+
+	<h1 class="d-inline-flex d-lg-none ">
+		<a href="https://matlabacademy.mathworks.com/" class="add_cursor_pointer">Self-Paced Online Courses</a>
+		
+	</h1>
+	
+
+
+
+
+</div>
+
+
+					<div class="d-flex d-lg-none" id="global_mobile_actuator_container_search">
+						<button class="navbar-toggler btn collapsed" id="global_search_mobile_actuator" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#global_search_mobile" data-bs-target="#global_search_mobile" aria-controls="global_search_mobile" aria-expanded="false" aria-label="Toggle Search">
+							<span class="icon-search"></span>
+						</button>
+					</div>
+					<div class="navbar-collapse collapse" id="global_search_mobile">
+						<div id="global_search_mobile_placeholder"></div>
+						
+					</div>
+
+
+					<div class="d-flex d-lg-none" id="global_mobile_actuator_container_navigation">
+						<button class="navbar-toggler collapsed btn" id="global_navigation_mobile_actuator" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#global_navigation" data-bs-target="#global_navigation" aria-controls="global_navigation" aria-expanded="false" aria-label="Toggle Main Navigation">
+							<span class="icon-menu-full"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="global_navigation">
+						
+						<div class="topNavigation topnavigation containsResourceName resourceClass-topnavigation">
+
+
+
+	<ul class="navbar-nav flex-grow-1 align-items-lg-center mb-0">
+		
+		
+			<li class="nav-item dropdown" id="globalnav_item_helpcenter">
+				
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/help/?s_tid=user_nav_help" class="nav-link ">
+
+		
+
+		
+			
+			MATLAB Help Center</a>
+
+		
+		
+	
+
+				
+			</li>
+		
+			<li class="nav-item dropdown" id="globalnav_item_community">
+				
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/matlabcentral/?s_tid=user_nav_community" class="nav-link ">
+
+		
+
+		
+			
+			Community</a>
+
+		
+		
+	
+
+				
+			</li>
+		
+			<li class="nav-item dropdown" id="globalnav_item_learning">
+				
+	
+	
+	
+
+	
+
+	<a href="https://matlabacademy.mathworks.com/?s_tid=user_nav_learning" class="nav-link active ">
+
+		
+
+		
+			
+			Learning</a>
+
+		
+		
+	
+
+				
+			</li>
+		
+
+		
+		<li class="nav-item  -alignment_lg_end" id="globalnav_item_matlab">
+			
+			
+
+			
+	
+	
+	
+
+	
+
+	<a href="https://login.mathworks.com/embedded-login/landing.html?cid=getmatlab&amp;s_tid=user_nav_getml" style="display:none !important;" class="not-logged-in btn btn_color_blue d-block d-lg-inline-flex ">
+
+		
+
+		
+			
+			Get MATLAB</a>
+
+		
+		
+	
+
+			
+	
+	
+	
+
+	
+
+	<a href="https://login.mathworks.com/embedded-login/landing.html?cid=getmatlab&amp;s_tid=user_nav_getml" style="" class="logged-in btn btn_color_blue d-block d-lg-inline-flex ">
+
+		
+
+		
+			
+			MATLAB</a>
+
+		
+		
+	
+
+
+		</li>
+
+		
+		
+			<li class="nav-item dropdown -alignment_lg_end" id="globalnav_item_mwa">
+				<a href="https://signin.mathworks.com/start?cid=OCS&amp;uri=https%3A%2F%2Fmatlabacademy.mathworks.com%2Fdetails%2Fcalculations-with-vectors-and-matrices%2Fotmlcvm&amp;wid=header" class="nav-link headernav_login mwa-nav_login" id="mwanav_item_login" style="display: none;" aria-label="Sign In to Your MathWorks Account">
+					Sign In
+				</a>
+
+				<a href="https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm#" class="nav-link headernav_logout dropdown-toggle" id="mwanav_actuator" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-expanded="false" style="" title="Access your MathWorks Account">
+					<span class="mwanav_avatar mwa_image_drop_down" style="background-image: url(/matlabcentral/profiles/hc_avatar.png?v=3)" alt="Himanshu"></span>
+					<span class="mobile_account_name visually_hidden_xxl visually_hidden_xl visually_hidden_lg hidden-md hidden-lg">Himanshu</span>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-lg-end" id="mwanav_dropdown_menu">
+					<li id="mwanav_item_account"><a class="mwa-account dropdown-item" href="https://www.mathworks.com/mwaccount/?s_tid=user_nav_myac">My Account</a></li>
+					<li id="mwanav_item_community"><a class="mwa-community-profile dropdown-item" href="https://www.mathworks.com/matlabcentral/profile/authors/my_profile?s_tid=user_nav_comm">My Community Profile</a></li>
+					<li id="mwanav_item_associate"><a class="mwa-link-license dropdown-item" href="https://www.mathworks.com/licensecenter/licenses/add?s_tid=user_nav_aslc">Link License</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li id="mwanav_item_logout"><a class="mwa-logout dropdown-item" href="https://matlab.mathworks.com/service/core/authnz/logout?dest=https%3A%2F%2Fmatlabacademy.mathworks.com%2Fdetails%2Fcalculations-with-vectors-and-matrices%2Fotmlcvm">Sign Out</a></li>
+				</ul>
+			</li>
+		
+
+		
+
+		
+
+		<li class="nav-item d-block d-lg-none" id="globalnav_item_mobile_cta_support">
+			
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/support/contact_us.html" id="mobile_cta_support" class="nav-link ">
+
+		
+
+		
+			<span class="icon-phone"></span>
+			Contact MathWorks Support</a>
+
+		
+		
+	
+
+		</li>
+
+		<li class="nav-item d-block d-lg-none" id="globalnav_item_mobile_cta_corporate">
+			
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/" id="mobile_cta_corporate" class="nav-link ">
+
+		
+
+		
+			<span class="icon-membrane"></span>
+			Visit mathworks.com</a>
+
+		
+		
+	
+
+		</li>
+
+		<li class="nav-item dropdown d-none d-lg-block -alignment_lg_end" id="globalnav_item_search">
+			<a href="https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Search"><span class="icon-search"></span></a>
+			<div class="dropdown-menu">
+				<div class="container-lg">
+					<div class="row align-items-center">
+						
+						
+							<div class="col">
+								<div id="global_search_desktop_placeholder"></div><div id="global_search_container">
+							<div class="sectionHeadSearchBox sectionheadsearchbox containsResourceName resourceClass-sectionheadsearchbox">
+
+	
+
+	
+		
+    
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/bs5.min.20260513204911014.js"></script>
+
+
+
+		
+		
+    
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/typeahead.min.20260513204911014.css" type="text/css">
+
+
+
+		
+		
+		
+			
+		
+		<form name="search" id="site_search" class="site_search" action="https://www.mathworks.com/search/user-center" method="get">
+			<div class="input-group">
+				<label id="search-mathworks" class="visually-hidden" for="query">Search or ask a question</label>
+				<input type="hidden" name="c[]" id="site_search_collection" value="usercenter" disabled="">
+				<input type="search" name="q" id="query" class="form-control conjoined_search" aria-autocomplete="list" autocomplete="off" role="combobox" aria-controls="search_suggestions" aria-haspopup="listbox" aria-expanded="true" aria-activedescendant="" placeholder="Search or ask a question" data-site-domain="www" data-site-language="en" data-typeahead-proxy-url="https://services.mathworks.com/typeahead" data-typeahead-type="basic" data-typeahead-result-count="10" data-label-suggestions="Suggestions" data-label-see-all-results="See all results" aria-labelledby="search-mathworks">
+				
+				
+				<button type="submit" id="searchbutton" class="btn btn_color_blue btn-outline icon-search" aria-label="Search"></button>
+			</div>
+		</form>
+	
+
+	
+
+</div>
+
+						</div>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="nav-item d-none d-lg-block -alignment_lg_end" id="globalnav_item_matrix">
+			<mw-matrix lang="en" tier="DOTCOM" env="prod" bsversion="bs5" class="nav-link" host="https://www.mathworks.com"><!---->
+                <button type="button" class="waffle" aria-label="MathWorks App Menu" aria-haspopup="menu" aria-controls="matrix_menu_container" aria-expanded="false">
+                    <span class="icon-matrix">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19.5 19.5">
+                            <path d="M3.8,4.5H.8c-.4,0-.8-.3-.8-.8V.8c0-.4.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M18.8,4.5h-3c-.5,0-.8-.3-.8-.8V.8c0-.4.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M11.2,4.5h-3c-.5,0-.8-.3-.8-.8V.8c0-.4.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M3.8,19.5H.8c-.4,0-.8-.3-.8-.8v-3c0-.5.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M18.8,19.5h-3c-.5,0-.8-.3-.8-.8v-3c0-.5.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M11.2,19.5h-3c-.5,0-.8-.3-.8-.8v-3c0-.5.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M3.8,12H.8c-.4,0-.8-.3-.8-.8v-3c0-.5.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M18.8,12h-3c-.5,0-.8-.3-.8-.8v-3c0-.5.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                            <path d="M11.2,12h-3c-.5,0-.8-.3-.8-.8v-3c0-.5.3-.8.8-.8h3c.5,0,.8.3.8.8v3c0,.5-.3.8-.8.8Z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div id="matrix_menu_container" class="matrix_container mw_matrix_bs_5 mw_matrix_collapse false">
+                    <mw-matrix-content bsversion="bs5" lang="en" tier="DOTCOM" env="prod" host="https://www.mathworks.com">
+                    <!---->
+          <nav role="menu" class="matrix_content">
+              <ul role="presentation" class="list-unstyled matrix_links_primary">
+                <!--?lit$503603377$--><!---->
+                  <li role="presentation" class="" key="0">
+                    <a role="menuitem" class="svg_link" target="_blank" href="https://matlab.mathworks.com/" aria-label="MATLAB" id="matrix_link_matlab_home">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-matlabonline.svg" alt="MATLAB">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->MATLAB</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="1">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/help/" aria-label="Help Center" id="matrix_link_help_center">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-helpcenter.svg" alt="Help Center">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->Help Center</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="2">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/" aria-label="MathWorks" id="matrix_link_mathworks_dotcom">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-mathworks.svg" alt="MathWorks">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->MathWorks</span>
+                    </a>
+                  </li>
+                <!---->
+              </ul>
+              <ul role="presentation" class="list-unstyled matrix_links_secondary">
+                <!--?lit$503603377$--><!---->
+                  <li role="presentation" class="" key="0">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/matlabcentral/answers/index" aria-label="MATLAB Answers" id="matrix_link_answers">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-answers.svg" alt="MATLAB Answers">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->MATLAB Answers</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="1">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/matlabcentral/fileexchange" aria-label="File Exchange" id="matrix_link_file_exchange">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-fileexchange.svg" alt="File Exchange">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->File Exchange</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="2">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/videos.html" aria-label="Videos" id="matrix_link_videos">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-videos.svg" alt="Videos">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->Videos</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="3">
+                    <a role="menuitem" class="svg_link" target="" href="https://matlabacademy.mathworks.com/" aria-label="Online Training" id="matrix_link_online_training">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-onlinetraining.svg" alt="Online Training">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->Online Training</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="4">
+                    <a role="menuitem" class="svg_link" target="" href="https://blogs.mathworks.com/" aria-label="Blogs" id="matrix_link_blogs">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-blogs.svg" alt="Blogs">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->Blogs</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="5">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/matlabcentral/cody" aria-label="Cody" id="matrix_link_cody">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-cody.svg" alt="Cody">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->Cody</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="6">
+                    <a role="menuitem" class="svg_link" target="" href="https://drive.mathworks.com/" aria-label="MATLAB Drive" id="matrix_link_matlab_drive">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-matlabdrive.svg" alt="MATLAB Drive">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->MATLAB Drive</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="7">
+                    <a role="menuitem" class="svg_link" target="_blank" href="https://thingspeak.com/" aria-label="ThingSpeak" id="matrix_link_thingspeak">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-thingspeak.svg" alt="ThingSpeak">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->ThingSpeak</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="8">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/support/bugreports/" aria-label="Bug Reports" id="matrix_link_bug_reports">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-bugreports.svg" alt="Bug Reports">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->Bug Reports</span>
+                    </a>
+                  </li>
+                <!----><!---->
+                  <li role="presentation" class="" key="9">
+                    <a role="menuitem" class="svg_link" target="" href="https://www.mathworks.com/matlabcentral/" aria-label="Community" id="matrix_link_community">
+                      <img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/ico-matrix-community.svg" alt="Community">
+                      <span class="matrix_link_title"><!--?lit$503603377$-->Community</span>
+                    </a>
+                  </li>
+                <!---->
+              </ul>
+          </nav>
+        </mw-matrix-content>
+                </div>
+            </mw-matrix>
+		</li>
+	</ul>
+
+
+	
+
+
+</div>
+
+					</div>
+				</div>
+
+				
+			</div>
+		</nav>
+	</header>
+
+
+
+		
+		<div class="subnav" id="subnav">
+			<div class="subnav_container">
+				<div class="container-fluid container-lg">
+					<div class="row">
+						<div class="col-12">
+							<div class="slidingNav slidingnav containsResourceName resourceClass-slidingnav">
+
+<div id="sliding_nav" class="splide is-initialized splide--slide splide--ltr splide--draggable is-active" data-item-per-page="1" role="region" aria-roledescription="carousel">
+	<div class="splide__track splide__track--slide splide__track--ltr splide__track--draggable" id="sliding_nav-track" style="padding-left: 0px; padding-right: 0px;" aria-live="polite" aria-atomic="true">
+		<ul class="splide__list" id="sliding_nav-list" role="presentation" style="transform: translateX(0px);">
+			
+				
+					<li class="splide__slide active is-active is-visible" id="sliding_nav-slide01" role="group" aria-roledescription="slide" aria-label="1 of 1">
+						
+	
+	
+	
+
+	
+
+	<a href="https://matlabacademy.mathworks.com/" class=" ">
+
+		
+
+		
+			
+			Online Courses</a>
+
+		
+		
+	
+
+					</li>
+				
+				
+			
+		</ul>
+	</div>
+</div>
+<div>
+	<div class="cq-placeholder" data-emptytext="Sliding Navigation"></div>
+</div>
+
+    
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/splide.min.20260513204911014.css" type="text/css">
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/slidingnav.min.20260513204911014.css" type="text/css">
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/splide.min.20260513204911014.js"></script>
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/slidingnav.min.20260513204911014.js"></script>
+
+
+</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+	
+	
+
+
+
+	</div>
+
+
+
+
+
+		
+
+		<div class="content_container" id="content_container">
+			<div class="container-fluid container-lg">
+				
+
+<main id="main" tabindex="-1">
+	
+	<section><div class="mainParsys parsys containsResourceName resourceClass-parsys"><div class="targetcontainer containsResourceName resourceClass-targetcontainer section">
+
+
+
+<div class="personalization-container " id="web-application-body-container">
+	<div><div class="targetContent parsys containsResourceName resourceClass-parsys"><div class="cqColumns containsResourceName section resourceClass-columns"><div class="row  ">
+
+	
+		<div class=" col-12 "><div class="2420e633-83fe-4c2d-9b62-4248985f27d2 parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+	
+</div>
+</div>
+
+</div>
+</div>
+</div></div>
+
+</div>
+</section>
+	
+	
+	
+		
+
+<div><div class="modalParsys parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+
+		
+
+
+	<div id="location_content" style="display:none;"></div>
+
+	<div class="modal fade" id="country-unselected" tabindex="-1" aria-labelledby="domain_selector_label" style="padding-left: 0px; display:none;" aria-modal="true" role="dialog">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/mathworks-logo.20260513204911014.svg" class="mw_logo theme_light" alt="MathWorks" width="173" height="35">
+					<img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/mathworks-logo-rev.20260513204911014.svg" class="mw_logo theme_dark" alt="MathWorks" width="173" height="35" style="display:none;">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<p class="h1 icon-globe" id="domain_selector_label">Select a Web Site</p>
+					<p>Choose a web site to get translated content where available and see local events and offers. Based on your location, we recommend that you select: <strong class="recommended-country">India</strong>.</p>
+					<div class="default-recommendation">
+						<p><a href="https://in.mathworks.com/" id="recommended_domain_button" class="btn btn_color_blue" data-lang="en"><span class="recommended-country">India</span></a></p>
+					</div>
+
+					<div class="ch-recommendation" style="display:none;">
+						<ul class="list-inline">
+							<li class="list-inline-item add_margin_5 d-block d-md-inline-block"><a href="https://ch.mathworks.com/" class="recommendation-button btn btn-outline btn_color_blue" data-subdomain="ch" data-lang="en" data-recommended-text="Switzerland" data-default-lang="true" data-do-not-rewrite="true"><strong class="recommended-country">India</strong> (English)</a></li>
+							<li class="list-inline-item add_margin_5 d-block d-md-inline-block"><a href="https://ch.mathworks.com/" class="recommendation-button btn btn-outline btn_color_blue" data-subdomain="ch" data-lang="de" data-recommended-text="Schweiz" data-do-not-rewrite="true"><strong class="recommended-country">India</strong> (Deutsch)</a></li>
+							<li class="list-inline-item add_margin_5 d-block d-md-inline-block"><a href="https://ch.mathworks.com/" class="recommendation-button btn btn-outline btn_color_blue" data-subdomain="ch" data-lang="fr" data-recommended-text="Suisse" data-do-not-rewrite="true"><strong class="recommended-country">India</strong> (Français)</a></li>
+						</ul>
+					</div>
+					<div class="zh-recommendation" style="display:none;">
+						<ul class="list-inline">
+							<li class="list-inline-item"><a href="https://ww2.mathworks.cn/" class="recommendation-button btn btn-outline btn_color_blue" data-subdomain="ww2" data-lang="zh" data-recommended-text="中国" data-default-lang="true" data-do-not-rewrite="true"><strong class="recommended-country">India</strong>（简体中文）</a></li>
+							<li class="list-inline-item"><a href="https://ww2.mathworks.cn/" class="recommendation-button btn btn-outline btn_color_blue" data-subdomain="ww2" data-lang="en" data-recommended-text="China" data-do-not-rewrite="true"><strong class="recommended-country">India</strong> (English)</a></li>
+						</ul>
+					</div>
+
+					<p>You can also select a web site from the following list</p>
+					<div class="alert alert-warning" role="alert" id="china_performance_alert" style="display:none;"> <span class="alert_icon icon-alert-warning"></span>
+						<p class="alert_heading"><strong>How to Get Best Site Performance</strong></p>
+						<p>Select the China site (in Chinese or English) for best site performance. Other MathWorks country sites are not optimized for visits from your location.</p>
+					</div>
+					<div class="row add_margin_30">
+						<div class="col-12 col-sm-4 col-lg-3">
+							<p class="h3 add_bottom_rule">Americas</p>
+							<ul class="list-unstyled">
+								<li><a href="https://la.mathworks.com/" class="domain_selector_link" data-country-code="LA" data-subdomain="la" data-lang="es" data-default-lang="true" data-selected-text="América Latina" data-recommended-text="América Latina" data-do-not-rewrite="true">América Latina</a> (Español)</li>
+								<li><a href="https://www.mathworks.com/" class="domain_selector_link" data-country-code="CA" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Canada</a> (English)</li>
+								<li><a href="https://www.mathworks.com/" class="domain_selector_link" data-country-code="US" data-subdomain="www" data-lang="en" data-default-lang="true" data-selected-text="United States" data-recommended-text="United States" data-do-not-rewrite="true">United States</a> (English)</li>
+							</ul>
+						</div>
+						<div class="col-12 col-sm-4 col-lg-6">
+							<p class="h3 add_bottom_rule">Europe</p>
+							<div class="row">
+								<div class="col-6 col-sm-12 col-lg-6">
+									<ul class="list-unstyled">
+										<li><a href="https://nl.mathworks.com/" class="domain_selector_link" data-country-code="BE" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Belgium</a> (English)</li>
+										<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="DK" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Denmark</a> (English)</li>
+										<li><a href="https://de.mathworks.com/" class="domain_selector_link" data-country-code="DE" data-subdomain="de" data-lang="de" data-default-lang="true" data-selected-text="Deutschland" data-recommended-text="Deutschland" data-do-not-rewrite="true">Deutschland</a> (Deutsch)</li>
+										<li><a href="https://es.mathworks.com/" class="domain_selector_link" data-country-code="ES" data-subdomain="es" data-lang="es" data-default-lang="true" data-selected-text="España" data-recommended-text="España" data-do-not-rewrite="true">España</a> (Español)</li>
+										<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="FI" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Finland</a> (English)</li>
+										<li><a href="https://fr.mathworks.com/" class="domain_selector_link" data-country-code="FR" data-subdomain="fr" data-lang="fr" data-default-lang="true" data-selected-text="France" data-recommended-text="France" data-do-not-rewrite="true">France</a> (Français)</li>
+										<li><a href="https://uk.mathworks.com/" class="domain_selector_link" data-country-code="IE" data-subdomain="uk" data-lang="en" data-do-not-rewrite="true">Ireland</a> (English)</li>
+										<li><a href="https://it.mathworks.com/" class="domain_selector_link" data-country-code="IT" data-subdomain="it" data-lang="it" data-default-lang="true" data-selected-text="Italia" data-recommended-text="Italia" data-do-not-rewrite="true">Italia</a> (Italiano)</li>
+										<li><a href="https://nl.mathworks.com/" class="domain_selector_link" data-country-code="LU" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Luxembourg</a> (English)</li>
+									</ul>
+								</div>
+								<div class="col-6 col-sm-12 col-lg-6">
+									<ul class="list-unstyled">
+										<li><a href="https://nl.mathworks.com/" class="domain_selector_link" data-country-code="NL" data-subdomain="nl" data-lang="en" data-default-lang="true" data-selected-text="Benelux" data-recommended-text="Netherlands" data-do-not-rewrite="true">Netherlands</a> (English)</li>
+										<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="NO" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Norway</a> (English)</li>
+										<li><a href="https://de.mathworks.com/" class="domain_selector_link" data-country-code="AT" data-subdomain="de" data-lang="de" data-do-not-rewrite="true">Österreich</a> (Deutsch)</li>
+										<li><a href="https://www.mathworks.com/" class="domain_selector_link" data-country-code="PT" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Portugal</a> (English)</li>
+										<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="SE" data-subdomain="se" data-lang="en" data-default-lang="true" data-selected-text="Nordic" data-recommended-text="Sweden" data-do-not-rewrite="true">Sweden</a> (English)</li>
+										<li>Switzerland
+											<ul class="list-unstyled add_indent_20">
+												<li><a href="https://ch.mathworks.com/" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="de" data-selected-text="Schweiz" data-recommended-text="Schweiz" data-do-not-rewrite="true">Deutsch</a></li>
+												<li><a href="https://ch.mathworks.com/" id="swiss_english" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="en" data-default-lang="true" data-selected-text="Switzerland" data-recommended-text="Switzerland" data-do-not-rewrite="true">English</a></li>
+												<li><a href="https://ch.mathworks.com/" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="fr" data-selected-text="Suisse" data-recommended-text="Suisse" data-do-not-rewrite="true">Français</a></li>
+											</ul>
+										</li>
+										<li><a href="https://uk.mathworks.com/" class="domain_selector_link" data-country-code="GB" data-subdomain="uk" data-lang="en" data-default-lang="true" data-selected-text="United Kingdom" data-recommended-text="United Kingdom" data-do-not-rewrite="true">United Kingdom</a> (English)</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-4 col-lg-3">
+							<p class="h3 add_bottom_rule">Asia Pacific</p>
+							<ul class="list-unstyled">
+								<li><a href="https://au.mathworks.com/" class="domain_selector_link" data-country-code="AU" data-subdomain="au" data-lang="en" data-default-lang="true" data-selected-text="Australia" data-recommended-text="Australia" data-do-not-rewrite="true">Australia</a> (English)</li>
+								<li><a href="https://in.mathworks.com/" class="domain_selector_link" data-country-code="IN" data-subdomain="in" data-lang="en" data-default-lang="true" data-selected-text="India" data-recommended-text="India" data-do-not-rewrite="true">India</a> (English)</li>
+								<li><a href="https://au.mathworks.com/" class="domain_selector_link" data-country-code="NZ" data-subdomain="au" data-lang="en" data-do-not-rewrite="true">New Zealand</a> (English)</li>
+								<li>中国
+									<ul class="list-unstyled add_indent_20">
+										<li><a href="https://ww2.mathworks.cn/" class="domain_selector_link" data-country-code="CN" data-subdomain="ww2" data-lang="zh" data-default-lang="true" data-selected-text="中国" data-recommended-text="中国" data-do-not-rewrite="true">简体中文</a></li>
+										<li><a href="https://ww2.mathworks.cn/" class="domain_selector_link" data-country-code="CN" data-subdomain="ww2" data-lang="en" data-default-lang="true" data-selected-text="China" data-recommended-text="China" data-do-not-rewrite="true">English</a></li>
+									</ul>
+								</li>
+								<li><a href="https://jp.mathworks.com/" class="domain_selector_link" data-country-code="JP" data-subdomain="jp" data-lang="ja" data-default-lang="true" data-selected-text="日本" data-recommended-text="日本" data-do-not-rewrite="true">日本</a> (日本語)</li>
+								<li><a href="https://kr.mathworks.com/" class="domain_selector_link" data-country-code="KR" data-subdomain="kr" data-lang="ko" data-default-lang="true" data-selected-text="한국" data-recommended-text="한국" data-do-not-rewrite="true">한국</a> (한국어)</li>
+							</ul>
+						</div>
+					</div>
+					<p class="text-center"><a href="https://in.mathworks.com/" class="worldwide_link" data-do-not-rewrite="true" data-lang="en">Contact your local office</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+    
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/alert.min.20260513204911014.css" type="text/css">
+
+
+
+
+
+
+
+
+    
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/domainselector.min.20260513204911014.js"></script>
+
+
+
+	
+</main>
+
+			</div>
+		<div id="adobeTargetActivities" style="display:none;"></div><div id="hydratedContent"><div id="lynx-mainContainer" data-test-id="mainContainer" style="position:relative;display:none"><div data-test-id="detailsContainer" style="position:absolute"><div data-test-id="courseDetailsContainer" style="display:flex;flex-wrap:wrap"><img src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/panel_otmlcvm.webp" alt="image for course Calculations with Vectors and Matrices" style="position:relative"><div data-test-id="courseTitleContainer" style="flex:1 1"><h1 data-test-id="courseTitle">Calculations with Vectors and Matrices</h1><p>Gain a deeper understanding of how to work with matrices and arrays in MATLAB. Learn the difference between element-wise and matrix operations, how to take advantage of implicit expansion, and apply statistical operations to arrays.</p><p></p></div></div><div data-test-id="courseDetails" style="display:flex"><div data-test-id="moduleDetails" style="flex:75%"><h2>Course modules</h2><div data-test-id="moduleDetailsContainer"><h3>Introduction</h3><p>Familiarize yourself with the course.</p><div>Lessons:<ul><li>Course Overview</li></ul><ul><li>Learning Outcomes and Prerequisites</li></ul></div></div><div data-test-id="moduleDetailsContainer"><h3>Operations on Arrays</h3><p>Explore element-wise and matrix operations and implicit expansion. </p><div>Lessons:<ul><li>Calculate Electricity Usage and Prices</li></ul><ul><li>Element-Wise and Matrix Operations</li></ul><ul><li>Calculate Revenue</li></ul><ul><li>Implicit Expansion</li></ul><ul><li>Adjust for Inflation and Calculate Daily Usage</li></ul></div></div><div data-test-id="moduleDetailsContainer"><h3>Statistical Operations on Matrices</h3><p>Apply descriptive statistics to rows and columns of matrices.</p><div>Lessons:<ul><li>Statistics on Matrices</li></ul><ul><li>Descriptive Statistics</li></ul></div></div><div data-test-id="moduleDetailsContainer"><h3>Matrix Multiplication</h3><p>Learn the basics of matrix multiplication in MATLAB®.</p><div>Lessons:<ul><li>Introduction to Matrix Multiplication </li></ul><ul><li>Weighted Averages</li></ul></div></div><div data-test-id="moduleDetailsContainer"><h3>Moving Window Calculations</h3><p>Perform operations on a subset of data that slides over the full data set.</p><div>Lessons:<ul><li>Statistics on Moving Windows</li></ul><ul><li>Rolling Calculations</li></ul><ul><li>Window Sizes</li></ul></div></div><div data-test-id="moduleDetailsContainer"><h3>Projects</h3><p>Practice what you learned in the course.</p><div>Lessons:<ul><li>Natick Hourly Temperature Data</li></ul><ul><li>Daily Snowfall Rates</li></ul></div></div><div data-test-id="moduleDetailsContainer"><h3>Conclusion</h3><p>Learn next steps and give feedback on the course.</p><div>Lessons:<ul><li>Summary</li></ul><ul><li>Additional Resources</li></ul><ul><li>Survey</li></ul></div></div></div><div data-test-id="extraDetails" style="flex:25%"><div data-test-id="about"> <p>Format:Self-paced</p> <p>Language:English</p></div><div data-test-id="features"><h3>Language</h3><h3><ul><li></li><li></li><li></li></ul></h3></div> <h3><a href="https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted">MATLAB Onramp</a></h3><div><p>Get started quickly with the basics of MATLAB.</p></div></div></div></div></div></div><div id="root"><div class="HeaderFooterWrapper_appContainer__bfJ_4"><div class="sticky-top Header_aemNavContainer__14gyu " id="sticky_container" data-test-id="horizontalNav"><div class="localnav Header_aemStickyNav__28mCw" id="localnav"><div class="localnav_container"><div class="container-fluid container-lg"><div class="row"><div class="col-12"><nav class="navbar navbar-expand-lg" aria-label="Local Navigation"><button class="navbar-toggler" type="button" id="localnav_actuator" data-toggle="collapse" data-bs-toggle="collapse" data-target="#local_navigation" data-bs-target="#local_navigation" aria-controls="localnav" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-kebab"></span></button><div class="collapse navbar-collapse" id="local_navigation"><div class="localNavigation localnav containsResourceName resourceClass-localnav"><ul class="navbar-nav" id="localnav_navbar"><li class="nav-item" datatestid="homeLink"><a class="Link_link__15ydg nav-link" data-test-id="homeLink" href="https://matlabacademy.mathworks.com/">Home</a></li><li class="nav-item"><a class="Link_link__15ydg nav-link" data-test-id="myCoursesLink" href="https://matlabacademy.mathworks.com/mycourses">My Courses</a></li><li class="nav-item"><a target="_self" data-test-id="otsLink" href="https://matlabacademy.mathworks.com/online-training-subscription?s_tid=ots_ln_ots" class="Link_link__15ydg nav-link">Online Training Suite</a></li><li class="nav-item"><div class="dropdown docMenu" data-test-id="support-and-doc"><button class="Header_navLinkButton__3ImFx nav-link btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Documentation &amp; Support</button><ul class="Header_navLinkDropdown__xsiYc dropdown-menu -has_maxheight" data-popper-placement="bottom-start"><li><a target="_blank" data-test-id="docLink" href="https://www.mathworks.com/help/matlab-and-simulink-online-courses/index.html?s_tid=doc" class="Link_link__15ydg dropdown-item">Documentation</a></li><li><a target="_blank" data-test-id="faqLink" href="https://www.mathworks.com/learn/training/online-courses-faq.html?s_tid=faq" class="Link_link__15ydg dropdown-item">FAQs</a></li></ul></div></li></ul></div></div></nav></div></div></div></div></div></div><div data-test-id="courseDetailsPage"><main id="skip_link_anchor" data-test-id="detailsPage"><div data-test-id="detailsContainer" class="Details_detailsContainer__lD9be"><div data-test-id="courseHeader" id="courseHeader" class="CourseHeader_courseStickyHeader__2v885 container"><div data-test-id="courseTitleContainer" class="CourseHeader_courseContainer__35ZEe"><div class="CourseHeader_headerDiv__1D9-R"><div><div class="ContentImage_imageDiv____cm1" data-test-id="imageContainer"><div class="skeleton"><img class="ContentImage_contentImageVisible__17-3F" data-test-id="courseImage" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/panel_otmlcvm.webp" alt="" width="170" height="90" aria-label="Calculations with Vectors and Matrices"></div></div></div><div class="CourseHeader_courseHeaderDiv__2Xuci"><div data-test-id="courseHeaderInfo" class="CourseHeader_courseInfoDiv__3pw9W"><div class="CourseHeader_titleDiv__2ehYY"><h1 data-test-id="courseTitle" class="CourseHeader_courseTitle__28kkf" tabindex="-1" id="topRegionTitle">Calculations with Vectors and Matrices</h1></div></div><div data-test-id="buttonDiv" class="CourseHeader_buttonDiv__-NOfC"><div class="CourseButton_buttonDiv__34wSk CourseButton_courseDetailsDiv__skqMY"><button type="button" class="CourseButton_launchBtn__WB4Jn Button_btn__qdjyK Button_btn-lg__iyGNp Button_btn_secondary__395u9" data-test-id="launchBtn">Start course</button><div class="CourseButton_courseMenuDiv__1IFe8"><ul data-test-id="buttonList" class="CourseButton_buttonList__YoF5V" data-mobile="false"><li><span data-test-id="shareContainer" class="Share_shareContainer__2CQON"><button type="button" class="Share_shareBtn__1JQAO Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="shareBtn" aria-expanded="false">Share Course</button></span></li><li><div><button type="button" class=" Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="certificateBtn">Certificate &amp; Progress Report</button><div></div></div></li><li><a data-test-id="qrgLink" href="https://matlabacademy.mathworks.com/artifacts/quick-reference.html?course=otmlcvm&amp;release=v1&amp;language=en&amp;" rel="noopener noreferrer" target="_blank" class="QuickReference_qrg__31Y4s">Quick Reference</a></li></ul><div data-test-id="progressContainer" class="CourseButton_progressContainer__1I47f"><div class="CourseProgress_progressDiv__3Z70j" data-test-id="progressDiv"><span class="CourseProgress_completedStatus__23xu-">COMPLETED</span><span data-test-id="accessSpan" class="CourseProgress_accessSpan__2TmQ4">Access expires Jan 30, 2029</span></div><span class="CourseButton_separator__21gul">|</span><div class="CourseButton_instanceDetails__3yUJ6"><span class="CourseButton_instanceVersion__LamLb" data-test-id="instanceVersion">v1</span><span class="CourseButton_instanceLanguage__2m_RI"><span class="CourseLanguages_courseLanguage__3Pp6N" data-test-id="courseLanguagesDiv"><span data-test-id="languageSpan"><span><span aria-hidden="true" title="English">English</span><span class="sr-only">English</span></span></span><span data-test-id="changeLanguageSpan" class="CourseLanguages_setLanguageSpan__1nUxp">(<button type="button" class="CourseLanguages_languageBtn__2ax-P Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="languageBtn" aria-label="Change language for the course">change</button>)</span></span></span></div></div></div></div></div></div></div></div></div><div data-test-id="contentDiv" class="Details_contentDiv__3mRug"><div class="container"><div data-test-id="contentContainer" class="Details_contentContainer__1WBB6"><div class="Details_courseGrid__NeUTo"><div class="Details_moduleDetails__1EBqw"><div id="alertContainer" data-test-id="alertContainer" class="CourseAlert_alertContainer__2rngM CourseAlert_stickyAlert__1JDbN" style="top: 260px;"></div><section aria-label="Course Description"><div data-test-id="courseDiv" class="Details_courseDiv__1ogfG"><div lang="en"><h2 class="ContentDescription_descriptionTitle__1sbNP"><span>Course description</span></h2><p data-test-id="longDescription" class="ContentDescription_description__3U2YZ">Gain a deeper understanding of how to work with matrices and arrays in MATLAB. Learn the difference between element-wise and matrix operations, how to take advantage of implicit expansion, and apply statistical operations to arrays.</p></div><div data-test-id="courseDetails" class="CourseDetails_courseDetails__2Xmhm"><h2 class="CourseDetails_moduleTitle__2iFkz">Course modules</h2><div data-test-id="modulesDiv" class="CourseDetails_modulesDiv__2xI7H"><div data-test-id="moduleDetailsContainer" class="ModuleDetails_moduleDetailsContainer__1igK8" tabindex="-1"><div data-test-id="checkMarkDiv" class="ModuleDetails_checkMarkDiv__1-dn0"><span class="ModuleDetails_progressSpan__3P6Cl icon-alert-success add_icon_color_green" data-test-id="completed" aria-label="Completed module" role="img"></span></div><div data-test-id="expandIconDiv" aria-hidden="true" class="ModuleDetails_expandIconDiv__2TL4R"><span class="icon-arrow-open-right"></span></div><div data-test-id="contentDiv" class="ModuleDetails_contentDiv__2HTZ1"><button type="button" class="ModuleDetails_titleBtn__2Sf4- Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="titleDiv" aria-expanded="false"><h3 lang="en">Introduction</h3><span class="ModuleDetails_progressSpan__3P6Cl"> <span class="" data-test-id="progessSpan"><span data-test-id="percentageAriaHidden" aria-hidden="true">100%</span><span data-test-id="pecentageScreenReaderOnly" class="sr-only">Progress 100% complete</span></span><span class="ModuleDetails_moduleDuration__3AcuF"> </span><span> | </span><span data-test-id="moduleDuration" class="ModuleDetails_moduleDuration__3AcuF"><span><span aria-hidden="false">5 min</span></span></span></span></button></div></div><div data-test-id="moduleDetailsContainer" class="ModuleDetails_moduleDetailsContainer__1igK8" tabindex="-1"><div data-test-id="checkMarkDiv" class="ModuleDetails_checkMarkDiv__1-dn0"><span class="ModuleDetails_progressSpan__3P6Cl icon-alert-success add_icon_color_green" data-test-id="completed" aria-label="Completed module" role="img"></span></div><div data-test-id="expandIconDiv" aria-hidden="true" class="ModuleDetails_expandIconDiv__2TL4R"><span class="icon-arrow-open-right"></span></div><div data-test-id="contentDiv" class="ModuleDetails_contentDiv__2HTZ1"><button type="button" class="ModuleDetails_titleBtn__2Sf4- Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="titleDiv" aria-expanded="false"><h3 lang="en">Operations on Arrays</h3><span class="ModuleDetails_progressSpan__3P6Cl"> <span class="" data-test-id="progessSpan"><span data-test-id="percentageAriaHidden" aria-hidden="true">100%</span><span data-test-id="pecentageScreenReaderOnly" class="sr-only">Progress 100% complete</span></span><span class="ModuleDetails_moduleDuration__3AcuF"> </span><span> | </span><span data-test-id="moduleDuration" class="ModuleDetails_moduleDuration__3AcuF"><span><span aria-hidden="false">15 min</span></span></span></span></button></div></div><div data-test-id="moduleDetailsContainer" class="ModuleDetails_moduleDetailsContainer__1igK8" tabindex="-1"><div data-test-id="checkMarkDiv" class="ModuleDetails_checkMarkDiv__1-dn0"><span class="ModuleDetails_progressSpan__3P6Cl icon-alert-success add_icon_color_green" data-test-id="completed" aria-label="Completed module" role="img"></span></div><div data-test-id="expandIconDiv" aria-hidden="true" class="ModuleDetails_expandIconDiv__2TL4R"><span class="icon-arrow-open-right"></span></div><div data-test-id="contentDiv" class="ModuleDetails_contentDiv__2HTZ1"><button type="button" class="ModuleDetails_titleBtn__2Sf4- Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="titleDiv" aria-expanded="false"><h3 lang="en">Statistical Operations on Matrices</h3><span class="ModuleDetails_progressSpan__3P6Cl"> <span class="" data-test-id="progessSpan"><span data-test-id="percentageAriaHidden" aria-hidden="true">100%</span><span data-test-id="pecentageScreenReaderOnly" class="sr-only">Progress 100% complete</span></span><span class="ModuleDetails_moduleDuration__3AcuF"> </span><span> | </span><span data-test-id="moduleDuration" class="ModuleDetails_moduleDuration__3AcuF"><span><span aria-hidden="false">5 min</span></span></span></span></button></div></div><div data-test-id="moduleDetailsContainer" class="ModuleDetails_moduleDetailsContainer__1igK8" tabindex="-1"><div data-test-id="checkMarkDiv" class="ModuleDetails_checkMarkDiv__1-dn0"><span class="ModuleDetails_progressSpan__3P6Cl icon-alert-success add_icon_color_green" data-test-id="completed" aria-label="Completed module" role="img"></span></div><div data-test-id="expandIconDiv" aria-hidden="true" class="ModuleDetails_expandIconDiv__2TL4R"><span class="icon-arrow-open-right"></span></div><div data-test-id="contentDiv" class="ModuleDetails_contentDiv__2HTZ1"><button type="button" class="ModuleDetails_titleBtn__2Sf4- Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="titleDiv" aria-expanded="false"><h3 lang="en">Matrix Multiplication</h3><span class="ModuleDetails_progressSpan__3P6Cl"> <span class="" data-test-id="progessSpan"><span data-test-id="percentageAriaHidden" aria-hidden="true">100%</span><span data-test-id="pecentageScreenReaderOnly" class="sr-only">Progress 100% complete</span></span><span class="ModuleDetails_moduleDuration__3AcuF"> </span><span> | </span><span data-test-id="moduleDuration" class="ModuleDetails_moduleDuration__3AcuF"><span><span aria-hidden="false">5 min</span></span></span></span></button></div></div><div data-test-id="moduleDetailsContainer" class="ModuleDetails_moduleDetailsContainer__1igK8" tabindex="-1"><div data-test-id="checkMarkDiv" class="ModuleDetails_checkMarkDiv__1-dn0"><span class="ModuleDetails_progressSpan__3P6Cl icon-alert-success add_icon_color_green" data-test-id="completed" aria-label="Completed module" role="img"></span></div><div data-test-id="expandIconDiv" aria-hidden="true" class="ModuleDetails_expandIconDiv__2TL4R"><span class="icon-arrow-open-right"></span></div><div data-test-id="contentDiv" class="ModuleDetails_contentDiv__2HTZ1"><button type="button" class="ModuleDetails_titleBtn__2Sf4- Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="titleDiv" aria-expanded="false"><h3 lang="en">Moving Window Calculations</h3><span class="ModuleDetails_progressSpan__3P6Cl"> <span class="" data-test-id="progessSpan"><span data-test-id="percentageAriaHidden" aria-hidden="true">100%</span><span data-test-id="pecentageScreenReaderOnly" class="sr-only">Progress 100% complete</span></span><span class="ModuleDetails_moduleDuration__3AcuF"> </span><span> | </span><span data-test-id="moduleDuration" class="ModuleDetails_moduleDuration__3AcuF"><span><span aria-hidden="false">10 min</span></span></span></span></button></div></div><div data-test-id="moduleDetailsContainer" class="ModuleDetails_moduleDetailsContainer__1igK8" tabindex="-1"><div data-test-id="checkMarkDiv" class="ModuleDetails_checkMarkDiv__1-dn0"><span class="ModuleDetails_progressSpan__3P6Cl icon-alert-success add_icon_color_green" data-test-id="completed" aria-label="Completed module" role="img"></span></div><div data-test-id="expandIconDiv" aria-hidden="true" class="ModuleDetails_expandIconDiv__2TL4R"><span class="icon-arrow-open-right"></span></div><div data-test-id="contentDiv" class="ModuleDetails_contentDiv__2HTZ1"><button type="button" class="ModuleDetails_titleBtn__2Sf4- Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="titleDiv" aria-expanded="false"><h3 lang="en">Projects</h3><span class="ModuleDetails_progressSpan__3P6Cl"> <span class="" data-test-id="progessSpan"><span data-test-id="percentageAriaHidden" aria-hidden="true">100%</span><span data-test-id="pecentageScreenReaderOnly" class="sr-only">Progress 100% complete</span></span><span class="ModuleDetails_moduleDuration__3AcuF"> </span><span> | </span><span data-test-id="moduleDuration" class="ModuleDetails_moduleDuration__3AcuF"><span><span aria-hidden="false">10 min</span></span></span></span></button></div></div><div data-test-id="moduleDetailsContainer" class="ModuleDetails_moduleDetailsContainer__1igK8" tabindex="-1"><div data-test-id="checkMarkDiv" class="ModuleDetails_checkMarkDiv__1-dn0"><span class="ModuleDetails_progressSpan__3P6Cl icon-alert-success add_icon_color_green" data-test-id="completed" aria-label="Completed module" role="img"></span></div><div data-test-id="expandIconDiv" aria-hidden="true" class="ModuleDetails_expandIconDiv__2TL4R"><span class="icon-arrow-open-right"></span></div><div data-test-id="contentDiv" class="ModuleDetails_contentDiv__2HTZ1"><button type="button" class="ModuleDetails_titleBtn__2Sf4- Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="titleDiv" aria-expanded="false"><h3 lang="en">Conclusion</h3><span class="ModuleDetails_progressSpan__3P6Cl"> <span class="" data-test-id="progessSpan"><span data-test-id="percentageAriaHidden" aria-hidden="true">100%</span><span data-test-id="pecentageScreenReaderOnly" class="sr-only">Progress 100% complete</span></span><span class="ModuleDetails_moduleDuration__3AcuF"> </span><span> | </span><span data-test-id="moduleDuration" class="ModuleDetails_moduleDuration__3AcuF"><span><span aria-hidden="false">5 min</span></span></span></span></button></div></div></div></div></div></section><section aria-labelledby="relatedCoursesTitle"><div data-test-id="relatedCoursesDiv" class="RelatedCourses_relatedCoursesDiv__1uyIV"><h2 id="relatedCoursesTitle" data-test-id="relatedCoursesTitle">This course is in these learning paths</h2><div class="CredentialPopover_credMsg__2TpgV" id="dc-help">Completing a learning path lets you share your achievement with a <button type="button" class=" Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="credPopoverBtn" aria-label="digital credential">digital credential</button>.</div><div data-test-id="relatedCoursesList" class="RelatedCourses_relatedCoursesList__37RIE"><div data-test-id="deckContainer" class="Deck_deck__3wmJ6"><div data-test-id="courseItemDiv"><div data-test-id="learningPathContainer" class="LearningPath_learningPath__3_bAD LearningPath_minimize__1MFYz"><a class="Link_link__15ydg " aria-hidden="true" tabindex="-1" href="https://matlabacademy.mathworks.com/details/matlab-for-the-mathworks-certified-matlab-associate-exam/lpmlmace"><div class="ContentImage_imageDiv____cm1 ContentImage_minimize__15TM-" data-test-id="imageContainer"><div class="skeleton"><img class="ContentImage_contentImageVisible__17-3F" data-test-id="learningpathImage" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/panel_lpmlmace.webp" alt="" width="85" height="45" aria-label="MATLAB for the MathWorks Certified MATLAB Associate Exam"></div><span data-test-id="learningPathCourseCount" class="ContentImage_learningPathCourseCount__3KSS2 ContentImage_learningPathCourseCountDD__2uywa">14</span></div></a><div class="LearningPath_descriptionDiv__1hwSt"><div><h3 data-test-id="learningPathTitle" class="LearningPath_title__3pjpa "><a class="Link_link__15ydg " href="https://matlabacademy.mathworks.com/details/matlab-for-the-mathworks-certified-matlab-associate-exam/lpmlmace"><span>MATLAB for the MathWorks Certified MATLAB Associate Exam</span></a></h3></div><ul class="LearningPath_infoList__22RFC"><li><span data-test-id="learningPathCourseCountText" class="LearningPath_courseCountInfo__1PJgf">LEARNING PATH: 14 COURSES</span></li></ul></div></div><div data-test-id="learningPathContainer" class="LearningPath_learningPath__3_bAD LearningPath_minimize__1MFYz"><a class="Link_link__15ydg " aria-hidden="true" tabindex="-1" href="https://matlabacademy.mathworks.com/details/build-matlab-proficiency/lpmlbmp"><div class="ContentImage_imageDiv____cm1 ContentImage_minimize__15TM-" data-test-id="imageContainer"><div class="skeleton"><img class="ContentImage_contentImageVisible__17-3F" data-test-id="learningpathImage" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/panel_lpmlbmp.webp" alt="" width="85" height="45" aria-label="Build MATLAB Proficiency"></div><span data-test-id="learningPathCourseCount" class="ContentImage_learningPathCourseCount__3KSS2 ">8</span></div></a><div class="LearningPath_descriptionDiv__1hwSt"><div><h3 data-test-id="learningPathTitle" class="LearningPath_title__3pjpa "><a class="Link_link__15ydg " href="https://matlabacademy.mathworks.com/details/build-matlab-proficiency/lpmlbmp"><span>Build MATLAB Proficiency</span></a></h3></div><ul class="LearningPath_infoList__22RFC"><li><span data-test-id="learningPathCourseCountText" class="LearningPath_courseCountInfo__1PJgf">LEARNING PATH: 8 COURSES</span></li></ul></div></div><div data-test-id="learningPathContainer" class="LearningPath_learningPath__3_bAD LearningPath_minimize__1MFYz"><a class="Link_link__15ydg " aria-hidden="true" tabindex="-1" href="https://matlabacademy.mathworks.com/details/core-matlab-skills/lpmlcms"><div class="ContentImage_imageDiv____cm1 ContentImage_minimize__15TM-" data-test-id="imageContainer"><div class="skeleton"><img class="ContentImage_contentImageVisible__17-3F" data-test-id="learningpathImage" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/panel_lpmlcms.webp" alt="" width="85" height="45" aria-label="Core MATLAB Skills"></div><span data-test-id="learningPathCourseCount" class="ContentImage_learningPathCourseCount__3KSS2 ">4</span></div></a><div class="LearningPath_descriptionDiv__1hwSt"><div><h3 data-test-id="learningPathTitle" class="LearningPath_title__3pjpa "><a class="Link_link__15ydg " href="https://matlabacademy.mathworks.com/details/core-matlab-skills/lpmlcms"><span>Core MATLAB Skills</span></a></h3></div><ul class="LearningPath_infoList__22RFC"><li><span data-test-id="learningPathCourseCountText" class="LearningPath_courseCountInfo__1PJgf">LEARNING PATH: 4 COURSES</span></li></ul></div></div></div></div></div><a class="Link_link__15ydg icon-chevron" data-test-id="viewAllLink" href="https://matlabacademy.mathworks.com/">View all self-paced courses</a></div></section></div><div class="Details_courseDetails__dHTDb"><section aria-labelledby="aboutCourseTitle"><div data-test-id="rightColumnDiv" class="undefined Details_aboutCourseDiv__26jZk"><div data-test-id="aboutCourseDiv" class="AboutCourse_courseDescription__BwZuK" aria-labelledby="aboutCourseTitle"><h2 id="aboutCourseTitle" class="AboutCourse_title__TUeEX" data-test-id="aboutCourseTitle">About this course</h2><div data-test-id="contentDiv" class="AboutCourse_contentDiv__1EYe_"><div class="AboutCourse_infoDiv__PnF1K"><div data-test-id="videoDiv" class="VideoOverlay_videoDiv__11285"><button type="button" class="VideoOverlay_videoBtn__2V8Hc Button_btn__qdjyK Button_btn__qdjyK Button_btn_primary__22CX7" data-test-id="videoOverlayBtn" aria-label="Course Description Video"></button><iframe title="Course Description Video" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/videoByMarketingIdPage.html" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" tabindex="-1" aria-hidden="true"></iframe></div><div data-test-id="metaContainer" class="AboutCourse_metaDiv__w_NpL"><div class="AboutCourse_formatDiv__2siqN"><div><span>Format:</span><span data-test-id="selfPacedText">Self-paced</span></div><div><span>Length:</span>About <span><span aria-hidden="false">1 hour</span></span></div><div><span>Languages:</span><span><span class="CourseLanguages_courseLanguage__3Pp6N" data-test-id="courseLanguagesDiv"><span data-test-id="languageSpan"><span class="CourseLanguages_languageSpan__1GR79"><span><span aria-hidden="true" title="English">English</span><span class="sr-only">English</span></span>, </span><span class="CourseLanguages_languageSpan__1GR79"><span><span aria-hidden="true" title="Japanese">日本語</span><span class="sr-only">Japanese</span></span>, </span><span class="CourseLanguages_languageSpan__1GR79"><span><span aria-hidden="true" title="Chinese">中文</span><span class="sr-only">Chinese</span></span>, </span><span class="CourseLanguages_languageSpan__1GR79"><span><span aria-hidden="true" title="Korean">한국어</span><span class="sr-only">Korean</span></span>, </span><span class="CourseLanguages_languageSpan__1GR79"><span><span aria-hidden="true" title="Spanish">Español</span><span class="sr-only">Spanish</span></span>, </span><span class="CourseLanguages_languageSpan__1GR79"><span><span aria-hidden="true" title="French">Français</span><span class="sr-only">French</span></span></span></span></span></span></div></div></div></div><div data-test-id="prereqsContainer"><h3 class="AboutCourse_secondaryTitle__JnJRm h4">Recommended prerequisites</h3><div data-test-id="prerequisiteDiv"><div data-test-id="prereqsDiv"><div class="Course_course__1y8IC Course_minimize__Edsre" data-test-id="courseContainer"><a class="Link_link__15ydg " aria-hidden="true" tabindex="-1" href="https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted"><div class="ContentImage_imageDiv____cm1 ContentImage_minimize__15TM-" data-test-id="imageContainer"><div class="skeleton"><img class="ContentImage_contentImageVisible__17-3F" data-test-id="courseImage" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/panel_gettingstarted.webp" alt="" width="85" height="45" aria-label="MATLAB Onramp"></div></div></a><div data-test-id="descriptionDiv" class="Course_descriptionDiv__1Y86J"><div><h5 data-test-id="courseTitle" class="Course_courseTitle__3xwjc"><a class="Link_link__15ydg " href="https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted">MATLAB Onramp</a></h5></div><ul data-test-id="infoList" class="Course_infoList__30XJz"></ul></div></div></div></div></div><div data-test-id="featuresDiv"><div data-test-id="featuresContainer"><h3 class="AboutCourse_secondaryTitle__JnJRm h4"><button type="button" class="Features_titleBtn__SfHiJ Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="featuresTitleBtn">Features of self-paced online training</button></h3><div data-test-id="featureContainer" class="undefined"><ul data-test-id="featuresList" class="Features_featuresList__1tW5W"><li>Hands-on exercises with automated feedback</li><li>Access to MATLAB through your web browser</li><li>Shareable certificates and progress reports</li></ul></div></div></div><div data-test-id="authorDiv" class="AboutCourse_authorDiv__3W6M2"><div><h3 class="AboutCourse_secondaryTitle__JnJRm h4">Authored by:</h3></div><div class="Author_authorDiv__1W4JX"><div data-test-id="imageDiv" class="Author_imageDiv__2keZH"><img class="skeleton" width="85" height="85" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/bplacek.webp" alt="Ben Placek"></div><div><div><button type="button" class=" Button_btn__qdjyK Button_btn__qdjyK Button_btn_link__BtIeV" data-test-id="authorBtn"><b>Ben Placek</b></button></div><span>MathWorks</span></div></div></div></div></div></div></section></div></div></div></div></div></div></main></div></div><div class="sr-only" role="alert" id="statusAnnouncer"></div></div></div>
+		
+		
+
+<footer id="footer">
+	
+		<div class="primary_footer" id="primary_footer">
+			<div class="container-fluid container-lg">
+				<div class="row align-items-start">
+					<div class="col-12 col-md-9">
+						<nav>
+							
+							<div class="footerNavigation footernavigation containsResourceName resourceClass-footernavigation">
+
+
+
+	<ul class="list-inline " id="footernav" data-privacy="Your Privacy Choices">
+		<li class="list-inline-item" id="footernav_footernav_patents">
+			
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/company/trust-center.html?s_tid=gf_tc" class=" ">
+
+		
+
+		
+			
+			Trust Center</a>
+
+		
+		
+	
+
+		</li>
+	
+		<li class="list-inline-item" id="footernav_footernav_trademarks">
+			
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/company/trust-center/trademarks.html?s_tid=gf_trd" class=" ">
+
+		
+
+		
+			
+			Trademarks</a>
+
+		
+		
+	
+
+		</li>
+	
+		<li class="list-inline-item" id="footernav_footernav_privacy">
+			
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/company/trust-center/privacy-policy.html?s_tid=gf_priv" class=" ">
+
+		
+
+		
+			
+			Privacy Policy</a>
+
+		
+		
+	
+
+		</li>
+	
+		<li class="list-inline-item" id="footernav_footernav_piracy">
+			
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/company/trust-center/piracy.html?s_tid=gf_pir" class=" ">
+
+		
+
+		
+			
+			Preventing Piracy</a>
+
+		
+		
+	
+
+		</li>
+	
+		<li class="list-inline-item" id="footernav_footernav_status">
+			
+	
+	
+	
+
+	
+
+	<a href="https://status.mathworks.com/?s_tid=gf_application" class=" ">
+
+		
+
+		
+			
+			Application Status</a>
+
+		
+		
+	
+
+		</li>
+	
+		<li class="list-inline-item" id="footernav_footernav_contactus">
+			
+	
+	
+	
+
+	
+
+	<a href="https://www.mathworks.com/company/aboutus/contact_us.html?s_tid=gf_contact" class=" ">
+
+		
+
+		
+			
+			Contact Us</a>
+
+		
+		
+	
+
+		</li>
+	</ul>
+
+
+
+
+    
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/footernavigation.min.20260513204911014.js"></script>
+
+
+
+</div>
+
+						</nav>
+						<p class="copyright">© 1994-2026 The MathWorks, Inc.</p>
+					</div>
+					<div class="col-12 col-md-3">
+						<div id="countrynav" class="d-flex justify-content-end">
+							<button class="btn btn-outline btn_countrynav companion_btn add_margin_20" id="domainButton" data-toggle="modal" data-bs-toggle="modal" data-target="#country-unselected" data-bs-target="#country-unselected">
+								<span class="visually-hidden sr-only">Select a Web Site</span>
+								<span class="icon-globe"></span>
+								<span id="countrySelectorButtonText">India</span>
+							</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+	
+</footer>
+
+
+
+		
+			
+    
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/button.min.20260513204911014.css" type="text/css">
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/downsize.min.20260513204911014.css" type="text/css">
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/upsize.min.20260513204911014.css" type="text/css">
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/tags.min.20260513204911014.css" type="text/css">
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/bs5-footer.min.20260513204911014.css" type="text/css">
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/akamai.min.20260513204911014.js"></script>
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/substitutepricing.min.20260513204911014.js"></script>
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/tags.min.20260513204911014.js"></script>
+
+
+
+
+			
+
+			
+    
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/jquery.min.20260513204911014.js"></script>
+
+
+
+			
+    
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/bootstrap5.min.20260513204911014.js"></script>
+
+
+
+			
+    
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/signinanalytics.min.20260513204911014.js"></script>
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/spotlight.min.20260513204911014.js"></script>
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/bs5.min(1).20260513204911014.js"></script>
+
+
+
+			
+			
+				
+    
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/corporatenav.min.20260513204911014.js"></script>
+
+
+
+				<div class="modal-backdrop fade show" id="corporate_nav_modal"></div>
+			
+			
+
+			
+			<a href="https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm#" id="go-top" class="btn btn_color_mediumgray" tabindex="0" aria-hidden="true" aria-label="Back to top"><span class="icon-arrow-open-up icon_24"></span></a>
+			<div id="web-application-footer-assets"></div>
+
+			
+    
+<link rel="stylesheet" href="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/matrixmenu.min.20260513204911014.css" type="text/css">
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/matrixmenu.min.20260513204911014.js"></script>
+
+
+
+
+			
+
+		
+
+	
+
+
+
+
+<script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/userarea-typeahead-v1.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const possibleSelectors = ['#query','#search_query'];
+    possibleSelectors.forEach(selector => {
+      const inputElement = document.querySelector(selector);
+      if (inputElement) {
+        const customElement = document.createElement('userarea-typeahead');
+        customElement.setAttribute('input-selector', selector);
+        customElement.setAttribute('collection', 'online-courses-grouped');
+        customElement.setAttribute('app-label', 'Online Courses');
+        customElement.setAttribute('env', 'prod');
+        customElement.setAttribute('site-language', document.documentElement.lang);
+        customElement.setAttribute('blank-state', 'true');
+        document.body.appendChild(customElement);
+      }
+    });
+  });
+</script><script>!function(e){function r(r){for(var n,l,p=r[0],i=r[1],a=r[2],c=0,s=[];c<p.length;c++)l=p[c],Object.prototype.hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);for(f&&f(r);s.length;)s.shift()();return u.push.apply(u,a||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,p=1;p<t.length;p++){var i=t[p];0!==o[i]&&(n=!1)}n&&(u.splice(r--,1),e=l(l.s=t[0]))}return e}var n={},o={1:0},u=[];function l(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,l),t.l=!0,t.exports}l.m=e,l.c=n,l.d=function(e,r,t){l.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,r){if(1&r&&(e=l(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(l.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)l.d(t,n,function(r){return e[r]}.bind(null,n));return t},l.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(r,"a",r),r},l.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},l.p="/";var p=this["webpackJsonponlinecourses-app"]=this["webpackJsonponlinecourses-app"]||[],i=p.push.bind(p);p.push=r,p=p.slice();for(var a=0;a<p.length;a++)r(p[a]);var f=i;t()}([])</script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/2.8725e81c.chunk.js"></script><script src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/main.0b3200c0.chunk.js"></script><userarea-typeahead input-selector="#query" collection="online-courses-grouped" app-label="Online Courses" env="prod" site-language="en" blank-state="true"></userarea-typeahead><script>
+// InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3)
+(function() {
+  // You can swap host for lower envs as you did earlier
+  // var host = 'www-test1.mathworks.com';
+  // var host = 'nl.mathworks.com';
+  var host = 'mathworks.com';
+  //console.log('Host Value Set: ', host);
+  // var host = window.location.hostname;
+
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'zfNtLVVEHXE-1', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if (args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+      try {
+        json = msgIsString ? JSON.parse(event.data) : event.data;
+      } catch (ignore) {}
+      var payload = json && json.__tcfapiCall;
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (event && event.source && typeof event.source.postMessage === 'function') {
+              event.source.postMessage(
+                msgIsString ? JSON.stringify(returnMsg) : returnMsg,
+                '*'
+              );
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  }
+  makeStub();
+
+  // GPP stub from InMobi (removes need for your custom minimal stub)
+  function makeGppStub() {
+    var CMP_ID = 10;
+    var SUPPORTED_APIS = [
+      '2:tcfeuv2','6:uspv1','7:usnatv1','8:usca','9:usvav1',
+      '10:uscov1','11:usutv1','12:usctv1'
+    ];
+
+    window.__gpp_addFrame = function (n) {
+      if (!window.frames[n]) {
+        if (document.body) {
+          var i = document.createElement("iframe");
+          i.style.cssText = "display:none";
+          i.name = n;
+          document.body.appendChild(i);
+        } else {
+          window.setTimeout(window.__gpp_addFrame, 10, n);
+        }
+      }
+    };
+
+    window.__gpp_stub = function () {
+      var b = arguments;
+      __gpp.queue = __gpp.queue || [];
+      __gpp.events = __gpp.events || [];
+
+      if (!b.length || (b.length === 1 && b[0] === "queue")) {
+        return __gpp.queue;
+      }
+      if (b.length === 1 && b[0] === "events") {
+        return __gpp.events;
+      }
+
+      var cmd = b[0];
+      var clb = b.length > 1 ? b[1] : null;
+      var par = b.length > 2 ? b[2] : null;
+
+      if (cmd === "ping") {
+        if (typeof clb === 'function') {
+          clb({
+            gppVersion: "1.1",
+            cmpStatus: "stub",
+            cmpDisplayStatus: "hidden",
+            signalStatus: "not ready",
+            supportedAPIs: SUPPORTED_APIS,
+            cmpId: CMP_ID,
+            sectionList: [],
+            applicableSections: [-1],
+            gppString: "",
+            parsedSections: {}
+          }, true);
+        }
+      } else if (cmd === "addEventListener") {
+        if (!("lastId" in __gpp)) { __gpp.lastId = 0; }
+        __gpp.lastId++;
+        var lnr = __gpp.lastId;
+        __gpp.events.push({ id: lnr, callback: clb, parameter: par });
+        if (typeof clb === 'function') {
+          clb({
+            eventName: "listenerRegistered",
+            listenerId: lnr,
+            data: true,
+            pingData: {
+              gppVersion: "1.1",
+              cmpStatus: "stub",
+              cmpDisplayStatus: "hidden",
+              signalStatus: "not ready",
+              supportedAPIs: SUPPORTED_APIS,
+              cmpId: CMP_ID,
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {}
+            }
+          }, true);
+        }
+      } else if (cmd === "removeEventListener") {
+        var success = false;
+        for (var i = 0; i < __gpp.events.length; i++) {
+          if (__gpp.events[i].id == par) {
+            __gpp.events.splice(i, 1);
+            success = true;
+            break;
+          }
+        }
+        if (typeof clb === 'function') {
+          clb({
+            eventName: "listenerRemoved",
+            listenerId: par,
+            data: success,
+            pingData: {
+              gppVersion: "1.1",
+              cmpStatus: "stub",
+              cmpDisplayStatus: "hidden",
+              signalStatus: "not ready",
+              supportedAPIs: SUPPORTED_APIS,
+              cmpId: CMP_ID,
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {}
+            }
+          }, true);
+        }
+      } else if (cmd === "hasSection") {
+        if (typeof clb === 'function') { clb(false, true); }
+      } else if (cmd === "getSection" || cmd === "getField") {
+        if (typeof clb === 'function') { clb(null, true); }
+      } else {
+        __gpp.queue.push([].slice.apply(b));
+      }
+    };
+
+    window.__gpp_msghandler = function (event) {
+      var msgIsString = typeof event.data === "string";
+      var json;
+      try { json = msgIsString ? JSON.parse(event.data) : event.data; } catch (e) { json = null; }
+      if (typeof json === "object" && json !== null && "__gppCall" in json) {
+        var i = json.__gppCall;
+        window.__gpp(
+          i.command,
+          function (retValue, success) {
+            var returnMsg = { __gppReturn: { returnValue: retValue, success: success, callId: i.callId } };
+            if (event && event.source && typeof event.source.postMessage === 'function') {
+              event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+            }
+          },
+          ("parameter" in i) ? i.parameter : null,
+          ("version" in i) ? i.version : "1.1"
+        );
+      }
+    };
+
+    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+      window.__gpp = window.__gpp_stub;
+      window.addEventListener("message", window.__gpp_msghandler, false);
+      window.__gpp_addFrame("__gppLocator");
+    }
+  }
+  makeGppStub();
+
+  // USP/CCPA stub
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      // eslint-disable-next-line no-console
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+
+// End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3)
+
+
+/*************************************
+ * CMP Custom Code — Integrated with waitForCountryCode
+ * - NO external geo services (e.g., ipapi)
+ * - Uses window.MathWorksCountryCode when available
+ * - Falls back to Adobe Launch DE: isInUSCountry (boolean)
+ *************************************/
+
+/*************************************
+ * Variables initialization
+ *************************************/
+try { _satellite.logger.info("Launch DE isInUSCountry (debug):", _satellite.getVar('isInUSCountry')); } catch (e) {}
+var DOMAIN = _satellite.getVar('treasureDataSscDomain');
+var CMP_CONSENT_COOKIE = 'cmpConsent';
+
+var server = window.location.hostname;
+var path = window.location.pathname;
+
+var google = false;
+var facebook = false;
+var quantcast = false;
+var twitter = false;
+var twitterJapan = false;
+var adCloud = false;
+var linkedIn = false;
+var yahoo = false;
+var across = false;
+var baidu = false;
+var weChat = false;
+var researchGate = false;
+var terminus = false;
+var fancyDigital = false;
+var quora = false;
+var appcast = false;
+var indeed = false;
+var glassdoor = false;
+var consentResult = false;
+var liResult = false;
+var bing = false;
+var bingChina = false;
+var qualaroo = false;
+var qualarooChina = false;
+var nonGdprConsentFired = false;
+var gdprConsentFired = false;
+
+/*************************************
+ * Host flags
+ *************************************/
+var hasWw2Dash = server.indexOf('ww2-') > -1;
+var hasWw2Dot = server.indexOf('ww2.') > -1;
+var hasMatlabDot = server.indexOf('matlab.') > -1;
+var hasHomeDev = server.indexOf('home-dev') > -1;
+var hasInDash = server.indexOf('in-') > -1;
+var hasInDot = server.indexOf('in.') > -1;
+var hasKrDash = server.indexOf('kr-') > -1;
+var hasKrDot = server.indexOf('kr.') > -1;
+var hasJpDash = server.indexOf('jp-') > -1;
+var hasJpDot = server.indexOf('jp.') > -1;
+var hasMatlabAcademyDash = server.indexOf('matlabacademy-') > -1;
+var hasMatlabAcademyDot = server.indexOf('matlabacademy.') > -1;
+var hasWwwTest = server.indexOf('www-test') > -1;
+var hasWwwStage = server.indexOf('www-stage') > -1;
+var hasWwwInteg = server.indexOf('www-integ') > -1;
+var hasWwwDot = server.indexOf('www.') > -1;
+var hasJpTest = server.indexOf('jp-test') > -1;
+var hasJpStage = server.indexOf('jp-stage') > -1;
+var hasJpInteg = server.indexOf('jp-integ') > -1;
+var hasWw2Test = server.indexOf('ww2-test') > -1;
+var hasWw2Stage = server.indexOf('ww2-stage') > -1;
+var hasWw2Integ = server.indexOf('ww2-integ') > -1;
+var hasKrTest = server.indexOf('kr-test') > -1;
+var hasKrStage = server.indexOf('kr-stage') > -1;
+var hasKrInteg = server.indexOf('kr-integ') > -1;
+
+// China region by path (ES5-safe)
+var isChinaRegion = path.indexOf('/cn/') > -1;
+
+/*************************************
+ * Set services by domain (unchanged)
+ *************************************/
+if (!hasWw2Dash && !hasWw2Dot && !hasMatlabDot && !hasHomeDev) { // Excluded China, MATLAB, Home-Dev
+  google = true;
+  facebook = true;
+  adCloud = true;
+  //terminus = true; //Disabled as per MOD-1986 request
+  qualaroo = true;
+}
+
+if (!hasWw2Dash && !hasWw2Dot && !hasInDash && !hasInDot) { // Excluded China, India
+  //quantcast = true; //Disabled as per MOD-3147 request
+}
+
+if (!hasWw2Dash && !hasWw2Dot && !hasKrDash && !hasKrDot && !hasJpDash && !hasJpDot) { // Excluded China, Korea, Japan
+  //twitter = true; //Disabled as per MOD-1986 request
+  linkedIn = true;
+}
+
+if (hasMatlabAcademyDash || hasMatlabAcademyDot) { // Included MATLAB Academy
+  quora = true;
+  if (isChinaRegion) { // Allow Bing only for China region
+    bingChina = true;
+  }
+}
+
+if (hasWwwTest || hasWwwStage || hasWwwInteg || hasWwwDot) { // Included Only WWW
+  quora = true;
+  appcast = true;
+  indeed = true;
+  glassdoor = true;
+}
+
+if (hasJpTest || hasJpStage || hasJpInteg || hasJpDot) { // Included Only Japan
+  yahoo = true;
+  twitterJapan = true;
+}
+
+if (hasWw2Test || hasWw2Stage || hasWw2Integ || hasWw2Dot) { // Included Only China
+  baidu = true;
+  weChat = true;
+  fancyDigital = true;
+  bingChina = true;
+  qualarooChina = true;
+}
+
+if (hasKrTest || hasKrStage || hasKrInteg || hasKrDot) { // Included Only Korea
+  across = true;
+}
+
+if (hasMatlabDot || hasHomeDev) { // Included Only MATLAB, Home-Dev (NOTE: All Inbound Script Restricted Here)
+  google = false;
+  facebook = false;
+  adCloud = false;
+  terminus = false;
+  quantcast = false;
+  twitter = false;
+  linkedIn = false;
+  researchGate = false;
+  twitterJapan = false;
+  yahoo = false;
+  across = false;
+  baidu = false;
+  weChat = false;
+  fancyDigital = false;
+  quora = false;
+  appcast = false;
+  indeed = false;
+  glassdoor = false;
+  bingChina = false;
+  qualaroo = false;
+  qualarooChina = false;
+}
+
+/*************************************
+ * Helper: Wait for MathWorksCountryCode to appear
+ * - Polls briefly for Akamai-populated window.MathWorksCountryCode
+ * - If not available within max wait, falls back to Launch DE
+ *************************************/
+function waitForCountryCode(onDone) {
+  var tries = 0;
+  var maxTries = 20;       // 20 * 100ms = 2000ms (2s) max wait
+  var intervalMs = 100;
+
+  var timer = setInterval(function () {
+    try {
+      var cc = window.MathWorksCountryCode;
+      if (typeof cc === 'string' && cc.length > 0) {
+        clearInterval(timer);
+        try { _satellite.logger.info('Country code (MathWorks, delayed):', cc); } catch (e) {}
+        onDone(cc);
+        return;
+      }
+    } catch (err) {
+      try { _satellite.logger.info('Error accessing MathWorksCountryCode (poll):', err); } catch (e) {}
+    }
+
+    tries++;
+    if (tries >= maxTries) {
+      clearInterval(timer);
+      try { _satellite.logger.info('MathWorksCountryCode not available within timeout; using Launch DE fallback'); } catch (e) {}
+      onDone(null);
+    }
+  }, intervalMs);
+}
+
+/*************************************
+ * Helper: Resolve isInUS (async, callback)
+ * Priority:
+ *  1) window.MathWorksCountryCode (with small wait)
+ *  2) _satellite.getVar('isInUSCountry') (boolean Launch DE)
+ *************************************/
+function getIsInUS(callback) {
+  // First, try immediate synchronous read (fast path)
+  try {
+    var immediate = window.MathWorksCountryCode;
+    if (typeof immediate === 'string' && immediate.length > 0) {
+      var isUSImmediate = (immediate.toUpperCase() === 'US');
+      try { _satellite.logger.info('Country code (MathWorks, immediate):', immediate); } catch (e) {}
+      // Normalize to async
+      return setTimeout(function () { callback(isUSImmediate); }, 0);
+    }
+  } catch (e) {
+    try { _satellite.logger.info('Immediate access error (MathWorksCountryCode):', e); } catch (ignore) {}
+  }
+
+  // If not immediately available, wait briefly for it to appear
+  waitForCountryCode(function (ccOrNull) {
+    var isUS = false;
+
+    if (typeof ccOrNull === 'string' && ccOrNull.length > 0) {
+      isUS = (ccOrNull.toUpperCase() === 'US');
+    } else {
+      // Fallback to Adobe Launch DE (boolean)
+      try {
+        var deValue = _satellite.getVar('isInUSCountry'); // expected boolean from your DE
+        isUS = !!deValue;
+        try { _satellite.logger.info('Launch DE fallback isInUSCountry:', deValue); } catch (e) {}
+      } catch (err) {
+        try { _satellite.logger.info('Error resolving Launch DE isInUSCountry:', err); } catch (e2) {}
+        isUS = false;
+      }
+    }
+
+    callback(isUS);
+  });
+}
+
+/*************************************
+ * Common function to set cookies and fire inbound scripts
+ *************************************/
+function handleConsent(consentType) {
+  _satellite.cookie.set(CMP_CONSENT_COOKIE, 'true', { domain: DOMAIN });
+
+  if (google) { _satellite.track('googleBase'); }
+  if (facebook) { _satellite.track('facebookBase'); }
+  if (quantcast) { _satellite.track('quantcastBase'); }
+  if (adCloud) { _satellite.track('adCloudBase'); }
+  if (twitter) { _satellite.track('twitterBase'); }
+  if (researchGate) { _satellite.track('researchGateBase'); }
+  if (terminus) { _satellite.track('terminusBase'); }
+  if (linkedIn) { _satellite.track('linkedInBase'); }
+  if (twitterJapan) { _satellite.track('twitterBaseJapan'); }
+  if (yahoo) { _satellite.track('yahooBase'); }
+  if (across) { _satellite.track('acrossBase'); }
+  if (baidu) { _satellite.track('baiduBase'); }
+  if (weChat) { _satellite.track('weChatBase'); }
+  if (fancyDigital) { _satellite.track('fancyDigitalBase'); }
+  if (quora) { _satellite.track('quoraBase'); }
+  if (appcast) { _satellite.track('appcastBase'); }
+  if (indeed) { _satellite.track('indeedApplyComplete'); }
+  if (glassdoor) { _satellite.track('glassdoorApplyComplete'); }
+  if (bingChina) { _satellite.track('bingBaseChina'); }
+  if (qualaroo) { _satellite.track('qualarooSiteWideBaseCode'); }
+  if (qualarooChina) { _satellite.track('qualarooChinaBaseCode'); }
+
+  _satellite.logger.info("Inbound Scripts Fired - " + consentType);
+}
+
+/*************************************
+ * CCPA (US Privacy) Handling
+ *************************************/
+function handleCCPAConsent() {
+  window.__uspapi('getUSPData', 1, function (uspData, success) {
+    if (!success) {
+      _satellite.logger.info("USP CMP call failed");
+      return;
+    }
+
+    var usp = (uspData && typeof uspData.uspString === "string") ? uspData.uspString : "";
+
+    // CCPA v1 format: 1XYZ → index 2 = Opt-Out-of-Sale
+    var optOutSale = usp.charAt(2) === "Y";
+
+    if (optOutSale) {
+      // 1YYN → User opted out
+      _satellite.logger.info("User Opted-Out with CCPA consent, Don't fire Inbound Scripts --> " + usp.charAt(2));
+      return;
+    }
+
+    // 1NNN or 1--- → treat as consent given
+    _satellite.logger.info("CCPA consent taken --> " + (usp.charAt(2) || "-"));
+
+    handleConsent("CCPA");
+  });
+}
+
+/*************************************
+ * GDPR (TCF) Handling — uses resolved isInUS
+ *************************************/
+function handleGDPRConsent(isInUSResolved) {
+
+  // NEVER allow GDPR handling in US
+  if (isInUSResolved) {
+    _satellite.logger.info("Skipping GDPR handling because user is in US context.");
+    return;
+  }
+
+  window.__tcfapi('addEventListener', 2, function (tcData, success) {
+    if (!success) {
+      _satellite.logger.info("TCF CMP call failed");
+      return;
+    }
+
+    if (tcData.gdprApplies) {
+
+      if (tcData.eventStatus === "tcloaded" || tcData.eventStatus === "useractioncomplete") {
+
+        var consentResult = [1, 2, 3, 4, 5].every(function (i) {
+          return tcData.purpose.consents[i];
+        });
+
+        var liResult =
+          tcData.purpose.legitimateInterests[2] &&
+          tcData.purpose.legitimateInterests[10];
+
+        if (consentResult && liResult) {
+
+          _satellite.logger.info("GDPR consent fully granted --> " + consentResult);
+
+          if (!gdprConsentFired) {
+            gdprConsentFired = true;
+            handleConsent("GDPR");
+          }
+
+        } else {
+          _satellite.logger.info("GDPR consent not fully granted");
+        }
+
+      } else {
+        _satellite.logger.info("TCF CMP did not load correctly or user action incomplete");
+      }
+
+    } else {
+
+      // Only allow Non-GDPR fallback OUTSIDE US
+      if (!isInUSResolved) {
+        _satellite.logger.info("TCF consent reached - GDPR does not apply - Consent Not Needed");
+
+        if (!nonGdprConsentFired) {
+          nonGdprConsentFired = true;
+          handleConsent("Non-GDPR");
+        }
+      }
+    }
+  });
+}
+
+/*************************************
+ * Main Routing Logic — waits for isInUS via getIsInUS
+ *************************************/
+var _cmpFlowStarted = false;
+
+function handleConsentManagement() {
+  if (_cmpFlowStarted) {
+    _satellite.logger.info("Consent flow already started; skipping duplicate run.");
+    return;
+  }
+  _cmpFlowStarted = true;
+
+  getIsInUS(function (isInUSResolved) {
+    _satellite.logger.info("Resolved isInUS =", isInUSResolved);
+    if (isInUSResolved) {
+      handleCCPAConsent();
+    } else {
+      handleGDPRConsent(isInUSResolved);
+    }
+  });
+}
+
+// Initiate consent management
+handleConsentManagement();
+</script><iframe name="__tcfapiLocator" style="display: none;" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/saved_resource.html"></iframe><iframe name="__gppLocator" style="display: none;" src="./Calculations with Vectors and Matrices _ Self-Paced Online Courses - MATLAB &amp; Simulink_files/saved_resource(1).html"></iframe><script>_satellite["_runScript1"](function(event, target, Promise) {
+(function () {
+  'use strict';
+
+  if (window._mwHbInitDone) {
+    return;
+  }
+
+  window._mwHbInitDone = true;
+
+  var HEARTBEAT_GLOBAL = 'ADB2';
+  var MAX_POLLS = 240;
+  var POLL_MS = 250;
+  var HELP_CENTER_IFRAME_ID = 'iFrameResizer0';
+  var SESSION_NO_PLAYHEAD_MOVEMENT_MS = 30 * 60 * 1000;
+  var PLAYHEAD_MOVEMENT_EPSILON = 0.01;
+
+  var state = {
+    pollCount: 0
+  };
+
+  function safeString(value) {
+    return value == null ? '' : String(value);
+  }
+
+  function nowMs() {
+    return new Date().getTime();
+  }
+
+  function addUnique(arr, item) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === item) {
+        return;
+      }
+    }
+
+    arr.push(item);
+  }
+
+  function isSameOriginFrame(frameWindow) {
+    try {
+      return !!frameWindow && !!frameWindow.document;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function collectFrameWindows(rootWindow, out, depth) {
+    if (!rootWindow || depth > 3) {
+      return;
+    }
+
+    var frames;
+
+    try {
+      frames = rootWindow.frames;
+    } catch (e) {
+      return;
+    }
+
+    for (var i = 0; i < frames.length; i++) {
+      var childWindow;
+
+      try {
+        childWindow = frames[i];
+      } catch (e2) {
+        continue;
+      }
+
+      if (!childWindow || childWindow === rootWindow) {
+        continue;
+      }
+
+      if (isSameOriginFrame(childWindow)) {
+        addUnique(out, childWindow);
+        collectFrameWindows(childWindow, out, depth + 1);
+      }
+    }
+  }
+
+  function getCandidateWindows() {
+    var windows = [];
+    var preferredIframe = null;
+
+    addUnique(windows, window);
+
+    try {
+      if (window.parent && window.parent !== window) {
+        addUnique(windows, window.parent);
+      }
+    } catch (e) {
+    }
+
+    try {
+      preferredIframe = document.getElementById(HELP_CENTER_IFRAME_ID) || document.querySelector('iframe.iframe_help_center, iframe[name="iframe_help_center"]');
+    } catch (e2) {
+      preferredIframe = null;
+    }
+
+    if (preferredIframe && preferredIframe.contentWindow && isSameOriginFrame(preferredIframe.contentWindow)) {
+      addUnique(windows, preferredIframe.contentWindow);
+    }
+
+    collectFrameWindows(window, windows, 0);
+
+    return windows;
+  }
+
+  function getMAApi() {
+    var roots = [window];
+
+    try {
+      if (window.parent && window.parent !== window) {
+        roots.push(window.parent);
+      }
+    } catch (e) {
+    }
+
+    for (var i = 0; i < roots.length; i++) {
+      var root = roots[i];
+
+      try {
+        var apiRoot = root[HEARTBEAT_GLOBAL];
+
+        if (apiRoot && apiRoot.Media) {
+          return apiRoot;
+        }
+      } catch (e2) {
+      }
+    }
+
+    return null;
+  }
+
+  function getFrameDocument(frameWindow) {
+    try {
+      return frameWindow.document;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function getPlayerElements(frameWindow) {
+    var doc = getFrameDocument(frameWindow);
+
+    if (!doc) {
+      return [];
+    }
+
+    var results = [];
+    var nodes;
+    var i;
+
+    try {
+      nodes = doc.querySelectorAll('.video-js');
+    } catch (e) {
+      nodes = [];
+    }
+
+    for (i = 0; i < nodes.length; i++) {
+      if (nodes[i]) {
+        results.push(nodes[i]);
+      }
+    }
+
+    return results;
+  }
+
+  function getPlayerInstance(frameWindow, playerEl) {
+    if (!frameWindow || typeof frameWindow.videojs === 'undefined' || !playerEl) {
+      return null;
+    }
+
+    try {
+      return frameWindow.videojs(playerEl);
+    } catch (e) {
+      try {
+        if (playerEl.id) {
+          return frameWindow.videojs(playerEl.id);
+        }
+      } catch (e2) {
+      }
+
+      return null;
+    }
+  }
+//ACS-searches the current page and accessible frames for one or more players
+  function getPlayerContexts() {
+    var windows = getCandidateWindows();
+    var contexts = [];
+    var i;
+    var j;
+
+    for (i = 0; i < windows.length; i++) {
+      var frameWindow = windows[i];
+
+      if (!frameWindow || typeof frameWindow.videojs === 'undefined') {
+        continue;
+      }
+
+      var playerElements = getPlayerElements(frameWindow);
+
+      for (j = 0; j < playerElements.length; j++) {
+        var player = getPlayerInstance(frameWindow, playerElements[j]);
+
+        if (player) {
+          contexts.push({
+            frameWindow: frameWindow,
+            player: player
+          });
+        }
+      }
+    }
+
+    return contexts;
+  }
+
+  function getSatellite() {
+    if (window._satellite && typeof window._satellite.track === 'function') {
+      return window._satellite;
+    }
+
+    try {
+      if (window.parent && window.parent !== window && window.parent._satellite && typeof window.parent._satellite.track === 'function') {
+        return window.parent._satellite;
+      }
+    } catch (e) {
+    }
+
+    return null;
+  }
+
+  function isPlayerReadyFlagSatisfied() {
+    if (typeof window.playerLoaded === 'undefined') {
+      return true;
+    }
+
+    return !!window.playerLoaded;
+  }
+
+  function isPlayerLibraryReadyInAnyWindow() {
+    var windows = getCandidateWindows();
+
+    for (var i = 0; i < windows.length; i++) {
+      if (typeof windows[i].videojs !== 'undefined') {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  function getResolvedDuration(player) {
+    var duration = 0;
+    var mediaInfo = player && player.mediainfo ? player.mediainfo : {};
+
+    if (mediaInfo && mediaInfo.duration != null) {
+      duration = Number(mediaInfo.duration);
+
+      if (!isNaN(duration) && isFinite(duration) && duration > 0) {
+        return duration;
+      }
+    }
+
+    try {
+      if (player && typeof player.duration === 'function') {
+        duration = Number(player.duration());
+
+        if (!isNaN(duration) && isFinite(duration) && duration > 0) {
+          return duration;
+        }
+      }
+    } catch (e) {
+    }
+
+    return 0;
+  }
+
+  function getCurrentPlayhead(player) {
+    var currentTime = 0;
+
+    try {
+      currentTime = player && typeof player.currentTime === 'function' ? Number(player.currentTime()) : 0;
+    } catch (e) {
+      currentTime = 0;
+    }
+
+    if (isNaN(currentTime) || !isFinite(currentTime) || currentTime < 0) {
+      return 0;
+    }
+
+    return currentTime;
+  }
+
+  function getVideoMetadata(player, Media) {
+    var mediaInfo = player.mediainfo || {};
+    var customFields = mediaInfo.custom_fields || {};
+    var playerEl = player.el ? player.el() : null;
+    var ds = playerEl && playerEl.dataset ? playerEl.dataset : {};
+    var tags = '';
+
+    if (Array.isArray(mediaInfo.tags)) {
+      tags = mediaInfo.tags.toString();
+    } else if (mediaInfo.tags) {
+      tags = safeString(mediaInfo.tags);
+    }
+
+    var resolvedDuration = getResolvedDuration(player);
+    var mediaType = Media.MediaType && Media.MediaType.Video ? Media.MediaType.Video : 'video';
+
+    return {
+      name: safeString(mediaInfo.name || ds.videoTitle || ''),
+      id: safeString(mediaInfo.id || ds.videoId || ''),
+      length: resolvedDuration,
+      streamType: safeString(mediaInfo.streamType || 'VOD'),
+      mediaType: mediaType,
+      contextData: {
+        referenceID: safeString(mediaInfo.reference_id || ''),
+        playerType: safeString((player.player_ && player.player_.techName_) || 'videojs'),
+        contentTags: tags,
+        pubDate: mediaInfo.published_at ? safeString(mediaInfo.published_at) : '',
+        siteContent: 'video',
+        prodCenter: safeString(customFields.productcenter || ''),
+        market: safeString(customFields.market || ''),
+        program: safeString(customFields.program || ''),
+        focusArea: safeString(customFields.focusarea || ''),
+        cty: safeString(customFields.cty || ''),
+        owner: safeString(customFields.owner || ''),
+        externalInternal: safeString(customFields.externalinternal || '')
+      }
+    };
+  }
+
+  function getStreamTypeConstant(Media, streamType) {
+    var normalized = safeString(streamType).toUpperCase();
+    var types = Media.StreamType || {};
+
+    if (normalized === 'LIVE') {
+      return types.Live || types.LIVE || types.live || types.VOD || 'live';
+    }
+
+    if (normalized === 'LINEAR') {
+      return types.Linear || types.LINEAR || types.linear || types.VOD || 'linear';
+    }
+
+    if (normalized === 'AOD') {
+      return types.AOD || types.aod || types.VOD || 'aod';
+    }
+
+    if (normalized === 'PODCAST') {
+      return types.Podcast || types.PODCAST || types.podcast || types.VOD || 'podcast';
+    }
+
+    if (normalized === 'AUDIOBOOK') {
+      return types.Audiobook || types.AUDIOBOOK || types.audiobook || types.VOD || 'audiobook';
+    }
+
+    return types.VOD || types.vod || 'vod';
+  }
+
+  function buildHeartbeatConfig() {
+    return {
+      playerName: 'Brightcove HTML5',
+      channel: 'Video Channel'
+    };
+  }
+
+  function createHeartbeatInstance(Media) {
+    var cfg = buildHeartbeatConfig();
+    var trackerConfig = null;
+
+    try {
+      if (Media.TrackerConfig) {
+        trackerConfig = {};
+
+        if (Media.TrackerConfig.Channel) {
+          trackerConfig[Media.TrackerConfig.Channel] = cfg.channel;
+        }
+
+        if (Media.TrackerConfig.PlayerName) {
+          trackerConfig[Media.TrackerConfig.PlayerName] = cfg.playerName;
+        }
+      }
+    } catch (e) {
+      trackerConfig = null;
+    }
+
+    try {
+      if (trackerConfig) {
+        return Media.getInstance(trackerConfig);
+      }
+    } catch (e2) {
+    }
+
+    return Media.getInstance();
+  }
+
+  function showVideoPlayerCaptions(player) {
+    try {
+      var tracks = typeof player.textTracks === 'function' ? player.textTracks() : null;
+      var videoElement = player.el ? player.el() : null;
+      var videoPageLanguage = videoElement && videoElement.dataset ? videoElement.dataset.pageLanguage : null;
+
+      if (!tracks || !videoPageLanguage || videoPageLanguage === 'en') {
+        return;
+      }
+
+      for (var i = 0; i < tracks.length; i++) {
+        var track = tracks[i];
+
+        if ((track.kind === 'captions' || track.kind === 'subtitles') && track.language === videoPageLanguage) {
+          track.mode = 'showing';
+        }
+      }
+    } catch (e) {
+    }
+  }
+
+  function updatePlayhead(player) {
+    if (!player._hbTracker || !player._hbSessionStarted) {
+      return;
+    }
+
+    try {
+      var currentTime = getCurrentPlayhead(player);
+      var previousPlayhead = player._hbLastObservedPlayhead;
+
+      if (previousPlayhead == null || Math.abs(currentTime - previousPlayhead) > PLAYHEAD_MOVEMENT_EPSILON) {
+        player._hbLastPlayheadMovementAt = nowMs();
+      }
+
+      player._hbLastObservedPlayhead = currentTime;
+      player._hbTracker.updatePlayhead(currentTime);
+    } catch (e) {
+    }
+  }
+
+  function hasSessionExpiredFromNoPlayheadMovement(player) {
+    if (!player || !player._hbSessionStarted || !player._hbLastPlayheadMovementAt) {
+      return false;
+    }
+
+    return nowMs() - player._hbLastPlayheadMovementAt >= SESSION_NO_PLAYHEAD_MOVEMENT_MS;
+  }
+
+  function startSessionWhenReady(player, Media) {
+    if (!player || !player._hbTracker || player._hbSessionStarted) {
+      return;
+    }
+
+    if (!player._hbPlayIntent) {
+      return;
+    }
+
+    var meta = getVideoMetadata(player, Media);
+
+    if (!meta.length || meta.length <= 0) {
+      return;
+    }
+
+    var startingPlayhead = getCurrentPlayhead(player);
+
+    var mediaObject = Media.createMediaObject(
+      meta.name,
+      meta.id,
+      meta.length,
+      getStreamTypeConstant(Media, meta.streamType),
+      meta.mediaType
+    );
+
+    if (startingPlayhead >= 1) {
+      try {
+        mediaObject[Media.MediaObjectKey.MediaResumed] = true;
+      } catch (e) {
+      }
+    }
+
+    player._hbTracker.trackSessionStart(mediaObject, meta.contextData);
+
+    player._hbSessionStarted = true;
+    player._hbVideoStarted = true;
+    player._hbLastObservedPlayhead = startingPlayhead;
+    player._hbLastPlayheadMovementAt = nowMs();
+
+    updatePlayhead(player);
+
+    if (player._hbPendingPlay) {
+      player._hbPendingPlay = false;
+      trackPlay(player, Media);
+    }
+  }
+
+  function trackPlay(player, Media) {
+    if (!player._hbTracker) {
+      return;
+    }
+
+    if (!player._hbSessionStarted) {
+      player._hbPendingPlay = true;
+      startSessionWhenReady(player, Media);
+      return;
+    }
+
+    updatePlayhead(player);
+
+    if (!player._hbFirstPlayHandled) {
+      player._hbFirstPlayHandled = true;
+
+      var satellite = getSatellite();
+
+      if (satellite) {
+        try {
+          satellite.track('videoMeta');
+        } catch (e) {
+        }
+      }
+
+      player._hbTracker.trackPlay();
+    } else if (player._hbVideoStarted) {
+      player._hbTracker.trackPlay();
+    }
+
+    showVideoPlayerCaptions(player);
+  }
+
+  function trackPause(player, Media) {
+    if (player._hbTracker && player._hbSessionStarted) {
+      updatePlayhead(player);
+      player._hbTracker.trackPause();
+    }
+  }
+
+  function trackSeekStart(player, Media) {
+    if (player._hbTracker && player._hbSessionStarted) {
+      updatePlayhead(player);
+      player._hbTracker.trackEvent(Media.Event.SeekStart);
+    }
+  }
+
+  function trackSeekComplete(player, Media) {
+    if (player._hbTracker && player._hbSessionStarted) {
+      updatePlayhead(player);
+      player._hbTracker.trackEvent(Media.Event.SeekComplete);
+    }
+  }
+
+  function trackCompleteAndEnd(player, Media) {
+    if (player._hbTracker && player._hbSessionStarted) {
+      updatePlayhead(player);
+
+      try {
+        player._hbTracker.trackComplete();
+        player._hbTracker.trackSessionEnd();
+      } catch (e) {
+      }
+    }
+
+    player._hbVideoStarted = false;
+    player._hbSessionStarted = false;
+    player._hbPendingPlay = false;
+    player._hbPlayIntent = false;
+    player._hbFirstPlayHandled = false;
+    player._hbLastObservedPlayhead = null;
+    player._hbLastPlayheadMovementAt = 0;
+  }
+
+  function endSessionOnUnload(player, Media) {
+    if (!player || !player._hbTracker || !player._hbSessionStarted) {
+      return;
+    }
+
+    updatePlayhead(player);
+
+    try {
+      player._hbTracker.trackSessionEnd();
+    } catch (e) {
+    }
+
+    player._hbVideoStarted = false;
+    player._hbSessionStarted = false;
+    player._hbPendingPlay = false;
+    player._hbPlayIntent = false;
+    player._hbFirstPlayHandled = false;
+    player._hbLastObservedPlayhead = null;
+    player._hbLastPlayheadMovementAt = 0;
+  }
+
+  function attachUnloadListeners(player, Media) {
+    if (player._hbUnloadListenersAttached) {
+      return;
+    }
+
+    player._hbUnloadListenersAttached = true;
+
+    function handlePageHide() {
+      endSessionOnUnload(player, Media);
+    }
+
+    function handleBeforeUnload() {
+      endSessionOnUnload(player, Media);
+    }
+
+    try {
+      window.addEventListener('pagehide', handlePageHide, true);
+      window.addEventListener('beforeunload', handleBeforeUnload, true);
+    } catch (e) {
+    }
+  }
+
+  function attachPlayerListeners(player, Media) {
+    if (player._hbListenersAttached) {
+      return;
+    }
+
+    player._hbListenersAttached = true;
+
+    player.on('loadedmetadata', function () {
+      updatePlayhead(player);
+
+      if (player._hbPlayIntent) {
+        startSessionWhenReady(player, Media);
+      }
+    });
+
+    player.on('durationchange', function () {
+      updatePlayhead(player);
+
+      if (player._hbPlayIntent) {
+        startSessionWhenReady(player, Media);
+      }
+    });
+
+    player.on('canplay', function () {
+      if (player._hbPlayIntent) {
+        startSessionWhenReady(player, Media);
+      }
+    });
+
+    player.on('play', function () {
+      player._hbPlayIntent = true;
+
+      if (hasSessionExpiredFromNoPlayheadMovement(player)) {
+        try {
+          player._hbTracker.trackSessionEnd();
+        } catch (e) {
+        }
+
+        player._hbSessionStarted = false;
+        player._hbVideoStarted = false;
+        player._hbPendingPlay = true;
+        player._hbFirstPlayHandled = false;
+      }
+
+      startSessionWhenReady(player, Media);
+      trackPlay(player, Media);
+    });
+
+    player.on('timeupdate', function () {
+      updatePlayhead(player);
+    });
+
+    player.on('pause', function () {
+      trackPause(player, Media);
+    });
+
+    player.on('seeking', function () {
+      trackSeekStart(player, Media);
+    });
+
+    player.on('seeked', function () {
+      trackSeekComplete(player, Media);
+    });
+
+    player.on('ended', function () {
+      trackCompleteAndEnd(player, Media);
+    });
+
+    attachUnloadListeners(player, Media);
+  }
+//ACS-starts tracker initialization.
+  function initializeForPlayer(player, frameWindow) {
+    if (!player) {
+      return;
+    }
+
+    var MAApi = getMAApi();
+
+    if (!MAApi) {
+      return;
+    }
+
+    var Media = MAApi.Media;
+
+    if (player._hbTrackerInitializing || player._hbTracker) {
+      return;
+    }
+
+    player._hbTrackerInitializing = true;
+    player._hbFrameWindow = frameWindow || window;
+
+    player.ready(function () {
+      var result = createHeartbeatInstance(Media);
+
+      function onTrackerReady(tracker) {
+        if (!tracker) {
+          player._hbTrackerInitializing = false;
+          return;
+        }
+
+        player._hbTracker = tracker;
+        player._hbTrackerInitializing = false;
+        player._hbSessionStarted = false;
+        player._hbFirstPlayHandled = false;
+        player._hbVideoStarted = false;
+        player._hbPendingPlay = false;
+        player._hbPlayIntent = false;
+        player._hbLastObservedPlayhead = null;
+        player._hbLastPlayheadMovementAt = 0;
+
+        attachPlayerListeners(player, Media);
+
+        try {
+          if (typeof player.paused === 'function' && !player.paused()) {
+            player._hbPlayIntent = true;
+            player._hbPendingPlay = true;
+            startSessionWhenReady(player, Media);
+          }
+        } catch (e) {
+        }
+      }
+
+      if (result && typeof result.then === 'function') {
+        result
+          .then(onTrackerReady)
+          .catch(function () {
+            player._hbTrackerInitializing = false;
+          });
+      } else {
+        onTrackerReady(result);
+      }
+    });
+  }
+//ACS-directly checks videojs.players for an obvious player
+  function bootstrapKnownPlayer() {
+    var api = getMAApi();
+    var player = null;
+
+    try {
+      if (window.videojs && window.videojs.players) {
+        var playerKeys = Object.keys(window.videojs.players);
+
+        if (playerKeys.length === 1) {
+          player = window.videojs.players[playerKeys[0]];
+        } else if (window.videojs.players.videoPlayer) {
+          player = window.videojs.players.videoPlayer;
+        }
+      }
+    } catch (e) {
+      player = null;
+    }
+
+    if (!api || !player) {
+      return false;
+    }
+
+    if (!player._hbTracker && !player._hbTrackerInitializing) {
+      initializeForPlayer(player, window);
+      return true;
+    }
+
+    return false;
+  }
+//ACS - Polls and repeatedly looks for a usable Brightcove/Video.js player and starts initialization.
+  function pollForPlayerAndInit() {
+    if (!bootstrapKnownPlayer() && (!isPlayerLibraryReadyInAnyWindow() || !isPlayerReadyFlagSatisfied())) {
+      state.pollCount++;
+
+      if (state.pollCount < MAX_POLLS) {
+        window.setTimeout(pollForPlayerAndInit, POLL_MS);
+      }
+
+      return;
+    }
+
+    var contexts = getPlayerContexts();
+
+    for (var i = 0; i < contexts.length; i++) {
+      var context = contexts[i];
+
+      if (context && context.player && !context.player._hbTracker && !context.player._hbTrackerInitializing) {
+        initializeForPlayer(context.player, context.frameWindow);
+      }
+    }
+
+    state.pollCount++;
+
+    if (state.pollCount < MAX_POLLS) {
+      window.setTimeout(pollForPlayerAndInit, POLL_MS);
+    }
+  }
+
+  pollForPlayerAndInit();
+})();
+});</script><script>
+//TD JS SDK
+!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=["addRecord","blockEvents","fetchServerCookie","fetchGlobalID","fetchUserSegments","resetUUID","ready","setSignedMode","setAnonymousMode","set","trackEvent","trackPageview","trackClicks","unblockEvents"],s=0;s<r.length;s++){var c=r[s];e[t].prototype[c]=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}}(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/3.1.3/td.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o)}}("Treasure",this);
+
+// Configure an instance for your database
+var td = new Treasure({
+  writeKey: '11849/ea916395a5d7f890f5616f32b583a64d93ee220e',
+  database: _satellite.getVar('treasureDataTable'),
+  useNewJavaScriptEndpoint: true,
+  host: 'us01.records.in.treasuredata.com',
+  sscDomain: _satellite.getVar('treasureDataSscDomain'),
+  sscServer: _satellite.getVar('treasureDataSscServer'),
+  useServerSideCookie: true
+});
+
+//set consent status
+let cmpConsent = _satellite.cookie.get('cmpConsent');
+let mwaConsent = _satellite.getVar('mwaAuthStatus')
+if (cmpConsent) {
+  td.setSignedMode();
+} else if (mwaConsent == 'logged in') {
+  td.setSignedMode();
+} else {
+  td.setAnonymousMode();
+}
+//set variables for TD
+let visitor_id = _satellite.getVar('visitorId');
+let eloqua_guid_id = _satellite.getVar('Eloqua2');
+let pagename = _satellite.getVar('pageName');
+// Enable cross-domain tracking
+td.set('$global', 'td_global_id', 'td_global_id')
+//set td attributes
+td.set('td_clickdata_raw', {
+  td_adobe_mcvisid: visitor_id,
+  td_eloq_guid_id: eloqua_guid_id,
+  td_adobe_pagename: pagename
+});
+//fetchcookie, track page view
+td.fetchServerCookie(successCallback, errorCallback);
+//track pv functions
+function fireEvents() {
+  td.trackPageview('td_clickdata_raw');
+}
+function errorCallback() {
+  fireEvents();
+}
+function successCallback(result) {
+  // result === Server Side Cookie
+  td.set('$global', {
+    td_ssc_id: result
+  });
+  fireEvents();
+}
+//retrive the gloablId
+var successCallbackGlobalId = function(globalId) {
+  _satellite.setVar('treasureDataGlobalId', globalId);
+};
+var errorCallbackGlobalId = function(error) {
+  //cry();
+}
+if (cmpConsent) {
+  td.fetchGlobalID(successCallbackGlobalId, errorCallbackGlobalId);
+}
+
+var SuccessCallback = function(res) {
+  var tdSegments = '';
+  var tdAttributes = '';
+  tdSegments = Object.values(res[0].values);
+  localStorage.setItem('tdSegments', tdSegments);
+  for (let [key, value] of Object.entries(res[0].attributes)) {
+    tdAttributes += (`${key}:${value}` + ',')
+  }
+  localStorage.setItem('tdAttributes', tdAttributes);
+}
+
+if (cmpConsent) {
+  td.fetchUserSegments({
+    // prod
+      'audienceToken': ['180637e3-e67f-4975-9b95-2313d30ceb95'],
+    keys: {
+        'adobe_visitor_ids': visitor_id
+    }
+  }, SuccessCallback);
+}
+
+</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+_satellite.cookie.set("_sdsat_eid",_satellite.getVar('eid'),1);
+});</script><script>_satellite["_runScript3"](function(event, target, Promise) {
+!function(e,t,n,o,a,c,f){e.fbq||(a=e.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},e._fbq||(e._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],(c=t.createElement(n)).async=!0,c.src=o,(f=t.getElementsByTagName(n)[0]).parentNode.insertBefore(c,f))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("set","autoConfig",!1,"186030155234771"),fbq("init","186030155234771"),fbq("track","PageView");
+});</script><script>_satellite["_runScript4"](function(event, target, Promise) {
+var my_awesome_script=document.createElement("script");my_awesome_script.setAttribute("src","https://www.everestjs.net/static/le/last-event-tag-latest.min.js"),document.head.appendChild(my_awesome_script);var adCloudCheck=0,adCloudInterval=setInterval((function(){"undefined"!=typeof AdCloudEvent&&(AdCloudEvent("B1441C8B533095C00A490D4D@AdobeOrg","mathwgbl"),window.clearInterval(adCloudInterval)),5==++adCloudCheck&&window.clearInterval(adCloudInterval)}),200);
+});</script><script>_satellite["_runScript5"](function(event, target, Promise) {
+!function(e,t,n,c,p,a){e.qp||(c=e.qp=function(){c.qp?c.qp.apply(c,arguments):c.queue.push(arguments)},c.queue=[],(p=document.createElement(t)).async=!0,p.src=n,(a=document.getElementsByTagName(t)[0]).parentNode.insertBefore(p,a))}(window,"script","https://a.quora.com/qevents.js"),qp("init","804e7bec804c4c28b176de5e0395a246"),qp("track","ViewContent");
+});</script><script src="/local_router.js"></script></body></html>

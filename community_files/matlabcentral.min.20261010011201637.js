@@ -1,0 +1,1 @@
+null!==document.cookie.match(/^(.*;)?\s*mwa_profile\s*=\s*[^;]+(.*)?$/)&&document.addEventListener("DOMContentLoaded",function(){fetch("/matlabcentral/profile/api/v1/active/ping",{method:"POST"})});

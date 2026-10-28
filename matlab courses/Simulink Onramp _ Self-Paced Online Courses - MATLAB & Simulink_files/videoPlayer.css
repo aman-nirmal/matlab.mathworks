@@ -1,0 +1,60 @@
+:root {
+    --oc-video-backgoundColor: #000;
+}
+
+html,body {
+    margin:0;
+    padding:0;
+}
+
+#videoPlayer {
+    margin: auto;
+}
+
+.video-js {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+body.vjs-full-window {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.video-js.vjs-fullscreen {
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.video-js:-webkit-full-screen {
+    width: 100% !important;
+    height: 100% !important;
+}
+.video-js.vjs-fullscreen.vjs-user-inactive {
+    cursor: none;
+}
+#videoPlayer.vjs-error .vjs-error-display {
+    display:none;
+}
+.vjs-big-play-button {
+    display:none;
+}
+
+/*Temporary fix for g2691300 until Brightcove fixes the bug*/
+.video-js .vjs-menu :not(.vjs-selected):focus:not(:focus-visible) {
+    background: var(--oc-video-backgoundColor);
+}
+
+body.mw-theme-dark {
+    background-color: var(--oc-video-backgoundColor);
+}
